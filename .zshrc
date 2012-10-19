@@ -32,7 +32,6 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 rvm terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,5 +77,9 @@ alias gam='git commit --amend'
 alias gama='git commit -a --amend'
 alias grh='git reset --hard'
 alias gcp='git cherry-pick'
+
+# Other alises
+alias stackup='rails s unicorn'
+alias stackdebug='rails s --debug'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
