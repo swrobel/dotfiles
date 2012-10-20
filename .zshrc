@@ -55,6 +55,7 @@ alias reload='source ~/.zshrc'
 alias rake='nocorrect rake'
 
 # Git aliases
+alias gp='git push'
 alias gf='git fetch'
 alias gd='git diff'
 alias gr='git rebase'
@@ -77,6 +78,7 @@ alias gam='git commit --amend'
 alias gama='git commit -a --amend'
 alias grh='git reset --hard'
 alias gcp='git cherry-pick'
+alias gmv='git mv'
 
 # Other alises
 alias stackup='rails s unicorn'
