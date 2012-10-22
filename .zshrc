@@ -32,6 +32,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,6 +56,7 @@ alias reload='source ~/.zshrc'
 alias rake='nocorrect rake'
 
 # Git aliases
+alias gco='git checkout'
 alias gp='git push'
 alias gf='git fetch'
 alias gd='git diff'
