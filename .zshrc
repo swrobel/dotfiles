@@ -32,7 +32,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx)
+plugins=(osx terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,22 +45,28 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export AWS_RDS_HOME="/usr/local/Library/LinkedKegs/rds-command-line-tools/jars"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 unsetopt sharehistory
+setopt nobanghist
 
 # Zsh aliases
 alias zshrc='subl ~/.zshrc'
 alias reload='source ~/.zshrc'
 alias rake='nocorrect rake'
+alias which='type -p'
 
 # Git aliases
 alias gco='git checkout'
 alias gp='git push'
 alias gf='git fetch'
-alias gd='git diff'
+alias gd='git diff HEAD'
+alias gds='git diff HEAD --stat=150,80'
 alias gr='git rebase'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
 alias gl='git pull --rebase'
 alias gla='git pull --rebase --all'
 alias gs='git status -s'
@@ -72,6 +78,8 @@ alias gbd='git branch -D'
 alias gba='git branch -a'
 alias gcb='git checkout -b'
 alias gm='git merge'
+alias gmt='git mergetool'
+alias gma='git merge --abort'
 alias gad='git add .'
 alias ga='git add'
 alias gc='git commit'
@@ -81,9 +89,12 @@ alias gama='git commit -a --amend'
 alias grh='git reset --hard'
 alias gcp='git cherry-pick'
 alias gmv='git mv'
+alias grm='git rm'
+alias gsp='git stash pop'
+alias gst='git stash'
 
 # Other alises
 alias stackup='rails s unicorn'
 alias stackdebug='rails s --debug'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
