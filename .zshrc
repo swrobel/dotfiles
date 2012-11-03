@@ -54,7 +54,7 @@ setopt nobanghist
 
 # Zsh aliases
 alias zshrc='subl ~/.zshrc'
-alias reload='source ~/.zshrc'
+alias reload='source ~/.zshrc && rvm reload > /dev/null'
 alias rake='nocorrect rake'
 alias which='type -p'
 
