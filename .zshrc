@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="twilight"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -32,7 +28,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx terminalapp)
+plugins=(git osx terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,10 +38,10 @@ function tabname {
 
 export EDITOR="subl -w"
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export AWS_RDS_HOME="/usr/local/Library/LinkedKegs/rds-command-line-tools/jars"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+#export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+#export AWS_RDS_HOME="/usr/local/Library/LinkedKegs/rds-command-line-tools/jars"
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
@@ -93,8 +89,4 @@ alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
 
-# Other alises
-alias stackup='rails s unicorn'
-alias stackdebug='rails s --debug'
-
-PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/sbin:/usr/local/bin:$PATH
