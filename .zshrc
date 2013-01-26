@@ -89,4 +89,5 @@ alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
 
-PATH=/usr/local/sbin:/usr/local/bin:$PATH
+PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:$PATH:$HOME/.rvm/bin
+DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
