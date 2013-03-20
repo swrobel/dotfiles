@@ -89,5 +89,6 @@ alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/mysql/bin:$PATH:$HOME/.rvm/bin
+PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export rvmsudo_secure_path=1
