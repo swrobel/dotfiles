@@ -45,8 +45,9 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
-unsetopt sharehistory
-setopt nobanghist
+unsetopt sharehistory # Don't share history between terminal windows
+unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
+setopt nobanghist # Disable ZSH interpreting !
 
 # Zsh aliases
 alias zshrc='subl ~/.zshrc'
