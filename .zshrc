@@ -89,6 +89,7 @@ alias gmv='git mv'
 alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
+alias gcl='git clone'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
