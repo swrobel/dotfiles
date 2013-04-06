@@ -90,10 +90,17 @@ alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
 alias gcl='git clone'
+alias gph='git push heroku master'
+alias gpb='gp && gph'
 
 # Rails aliases
 alias be='bundle exec'
 alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
+
+# Heroku aliases
+alias h='heroku'
+alias hc='h console'
+alias hl='h logs -t'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
