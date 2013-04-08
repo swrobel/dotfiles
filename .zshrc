@@ -101,6 +101,11 @@ alias update_migrations='be rake railties:install:migrations && be rake db:migra
 alias h='heroku'
 alias hc='h console'
 alias hl='h logs -t'
+alias hr='h restart'
+alias hm='h rake db:migrate && hr'
+
+# Other aliases
+alias mou='open -a Mou'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
