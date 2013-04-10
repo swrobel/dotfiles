@@ -109,6 +109,7 @@ alias hm='h rake db:migrate && hr'
 # Other aliases
 alias mou='open -a Mou'
 alias s.='subl .'
+alias lla='ll -a'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
