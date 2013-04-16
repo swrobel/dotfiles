@@ -90,10 +90,12 @@ alias grm='git rm'
 alias gsp='git stash pop'
 alias gst='git stash'
 alias gcl='git clone'
-alias gph='git push heroku master'
+alias gph='gp heroku master'
 alias gpb='gp && gph'
 alias gpf='gp -f'
 alias gpbf='gpf && gph -f'
+alias gpp='gp prod master'
+alias gppf='gpp -f'
 
 # Rails aliases
 alias be='bundle exec'
