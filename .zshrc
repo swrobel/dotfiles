@@ -101,6 +101,7 @@ alias gppf='gpp -f'
 alias be='bundle exec'
 alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
 alias test='ruby -Itest'
+alias devlog='tail -f log/development.log'
 
 # Heroku aliases
 alias h='heroku'
