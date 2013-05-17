@@ -114,7 +114,7 @@ alias hm='h rake db:migrate && hr'
 # Other aliases
 alias mou='open -a Mou'
 alias s.='subl .'
-alias lla='ll -a'
+alias lla='ll -A'
 alias outin='cd .. && popd'
 alias rvmrc='rvm rvmrc to ruby-version'
 
