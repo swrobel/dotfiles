@@ -53,6 +53,7 @@ setopt nobanghist # Disable ZSH interpreting !
 alias zshrc='subl ~/.zshrc'
 alias reload='source ~/.zshrc && rvm reload > /dev/null'
 alias rake='nocorrect rake'
+alias rspec='nocorrec rspec'
 alias which='type -p'
 
 # Git aliases
