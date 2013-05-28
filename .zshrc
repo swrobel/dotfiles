@@ -118,6 +118,7 @@ alias s.='subl .'
 alias lla='ll -A'
 alias outin='cd .. && popd'
 alias rvmrc='rvm rvmrc to ruby-version'
+alias vup='vagrant up && vagrant ssh'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin:~/.bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
