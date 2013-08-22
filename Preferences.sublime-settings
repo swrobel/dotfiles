@@ -18,7 +18,10 @@
 		"*.iso",
 		"*.sqlite3",
 		"*.beam",
-		"*.dump"
+		"*.dump",
+		"*.eot",
+		"*.woff",
+		"*.svg"
 	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Theme - Farzher/WebDeveloperDark.tmTheme",
