@@ -43,15 +43,16 @@
 		"log",
 		"public/assets",
 		".*",
-		"*/dummy"
+		"*/dummy",
+		"doc"
 	],
 	"font_size": 13.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Modific",
-		"Vintage"
+		"Vintage",
+		"Modific"
 	],
 	"show_minimap": false,
 	"tab_size": 2,
