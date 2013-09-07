@@ -43,7 +43,7 @@
 		"log",
 		"public/assets",
 		".*",
-		"*/dummy",
+		"spec/dummy",
 		"doc"
 	],
 	"font_size": 13.0,
