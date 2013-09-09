@@ -44,7 +44,8 @@
 		"public/assets",
 		".*",
 		"spec/dummy",
-		"doc"
+		"doc",
+		"coverage"
 	],
 	"font_size": 13.0,
 	"highlight_line": true,
