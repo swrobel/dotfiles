@@ -96,6 +96,7 @@ alias gpbf='gpf && gph -f'
 alias gpp='gp prod master'
 alias gppf='gpp -f'
 alias gclean='g clean -df' # Remove all untracked files & directories
+alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 
 # Rails aliases
 alias be='bundle exec'
