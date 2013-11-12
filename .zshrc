@@ -99,11 +99,18 @@ alias gclean='g clean -df' # Remove all untracked files & directories
 alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 
 # Rails aliases
-alias be='bundle exec'
 alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
 alias test='ruby -Itest'
 alias devlog='tail -f log/development.log'
 alias rdbm='be rake db:migrate'
+# Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
+alias b='bundle'
+alias be='b exec'
+alias bi="b install --path vendor" # Install gems to vendor/ruby
+alias bil="b install --local" # Install gems from vendor/cache
+alias bu="b update"
+alias bp="b package" # Cache downloaded but not-yet-installed gems in vendor/cache
+alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
 
 # Heroku aliases
 alias h='heroku'
