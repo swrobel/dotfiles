@@ -3,6 +3,9 @@
 	[
 		"thor",
 		"ru",
-		"Vagrantfile"
+		"Vagrantfile",
+		"rabl",
+		"Berksfile",
+		".hooves"
 	]
 }
