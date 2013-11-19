@@ -37,7 +37,10 @@ function tabname {
 }
 
 export EDITOR="subl -w"
-export JAVA_HOME="$(/usr/libexec/java_home)"
+/usr/libexec/java_home > /dev/null 2>&1
+if [ $? -eq 0 ];then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+fi
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
