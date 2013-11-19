@@ -51,7 +51,7 @@ setopt nobanghist # Disable ZSH interpreting !
 
 # Zsh aliases
 alias zshrc='subl ~/.zshrc'
-alias reload='source ~/.zshrc && rvm reload > /dev/null'
+alias reload='source ~/.zshrc'
 alias rake='nocorrect noglob rake'
 alias rspec='nocorrect rspec'
 alias which='type -p'
@@ -127,9 +127,10 @@ alias mou='open -a Mou'
 alias s.='subl .'
 alias lla='ll -A'
 alias outin='cd .. && popd'
-alias rvmrc='rvm rvmrc to ruby-version'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin:~/.bin
+PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:~/.bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-export rvmsudo_secure_path=1
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
