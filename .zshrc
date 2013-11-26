@@ -129,7 +129,7 @@ alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH:~/.bin
+PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
