@@ -32,18 +32,23 @@ plugins=(git terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
-function tabname {
-	printf "\e]1;$1\a"
+tabname() {
+  printf "\e]1;$1\a"
+}
+
+cless() {
+  pygmentize -f terminal256 -O style=native "$1" | less -R
 }
 
 export EDITOR="subl -w"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+# Twilight theme
+export LSCOLORS="exfxcxdxbxegedabagacad"
+# Set JAVA_HOME if java is installed
 /usr/libexec/java_home > /dev/null 2>&1
 if [ $? -eq 0 ];then
   export JAVA_HOME="$(/usr/libexec/java_home)"
 fi
-export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
-
-export LSCOLORS="exfxcxdxbxegedabagacad"
 
 unsetopt sharehistory # Don't share history between terminal windows
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
@@ -129,8 +134,14 @@ alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
+PATH=./bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# If pygments is installed, always use colorful less command
+command -v pygmentize > /dev/null 2>&1
+if [ $? -eq 0 ];then
+  alias less='cless'
+fi
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
