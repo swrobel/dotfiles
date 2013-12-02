@@ -47,7 +47,9 @@
 		"spec/dummy",
 		"doc",
 		"coverage",
-		"node_modules"
+		"node_modules",
+		"vendor/bundle",
+		"vendor/cache"
 	],
 	"font_size": 13.0,
 	"highlight_line": true,
