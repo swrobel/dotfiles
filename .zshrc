@@ -81,7 +81,7 @@ alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 
 # Rails aliases
 alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
-alias test='ruby -Itest'
+alias rtest='ruby -Itest'
 alias devlog='tail -f log/development.log'
 alias rdbm='be rake db:migrate'
 # Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
