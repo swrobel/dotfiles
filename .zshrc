@@ -10,7 +10,12 @@ tabname() {
 }
 
 cless() {
-  pygmentize -f terminal256 -O style=native "$1" | less -R
+  pygmentize $1 > /dev/null 2>&1
+  if [ $? -eq 0 ];then
+    pygmentize -f terminal256 -O style=native $1 | /usr/bin/less -R
+  else
+    /usr/bin/less $1
+  fi
 }
 
 export EDITOR="subl -w"
