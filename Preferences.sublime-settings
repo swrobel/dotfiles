@@ -56,8 +56,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Modific",
-		"Vintage"
+		"Vintage",
+		"Modific"
 	],
 	"show_minimap": false,
 	"tab_size": 2,
