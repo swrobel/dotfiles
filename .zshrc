@@ -112,7 +112,7 @@ alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=./bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
+PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # If pygments is installed, always use colorful less command
@@ -121,6 +121,24 @@ if [ $? -eq 0 ];then
   alias less='cless'
 fi
 
+# chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
+# https://github.com/postmodern/chruby/wiki/Implementing-an-'after-use'-hook
+
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+save_function()
+{
+  local ORIG_FUNC="$(declare -f $1)"
+  local NEWNAME_FUNC="$2${ORIG_FUNC#$1}"
+  eval "$NEWNAME_FUNC"
+}
+
+save_function chruby old_chruby
+
+chruby() {
+  old_chruby $*
+  PATH=./bin:$PATH
+}
+
 chruby ruby-2.0
