@@ -143,4 +143,4 @@ chruby() {
   PATH=./bin:$PATH
 }
 
-chruby ruby-2.0
+chruby ruby-2.1
