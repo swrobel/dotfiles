@@ -18,6 +18,8 @@ cless() {
   fi
 }
 
+dsize() { du -h -d 1 "$*" 2> /dev/null | gsort -h ; }
+
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
