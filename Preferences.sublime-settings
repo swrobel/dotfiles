@@ -50,7 +50,8 @@
 		"node_modules",
 		"vendor/bundle",
 		"vendor/cache",
-		"bin"
+		"bin",
+		"build"
 	],
 	"font_size": 13.0,
 	"highlight_line": true,
