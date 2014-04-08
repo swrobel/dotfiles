@@ -29,6 +29,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 if [ $? -eq 0 ];then
   export JAVA_HOME="$(/usr/libexec/java_home)"
 fi
+export GOPATH=~/.go
 
 unsetopt sharehistory # Don't share history between terminal windows
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
@@ -114,7 +115,7 @@ alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin
+PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # If pygments is installed, always use colorful less command
