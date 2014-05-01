@@ -21,7 +21,8 @@
 		"*.dump",
 		"*.eot",
 		"*.woff",
-		"*.svg"
+		"*.svg",
+		"*.psd"
 	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Theme - Farzher/WebDeveloperDark.tmTheme",
