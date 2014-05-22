@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Find Results</string>
+
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+
+<!-- add the filetype extensions, here -->
+<!-- these are XML formatted files: -->
+
+			<string>^([^ ].*\.(?:xml|tmLanguage|hidden-tmLanguage|tmTheme):)$</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+
+<!-- reference to something in the "repository" -->
+
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+
+<!-- which syntax should match up to the filetype extensions listed above: -->
+<!-- to find out what the "scopeName" is, refer to the corresponding *.tmLanguage file -->
+<!-- for XML, this is ~/Library/Application Support/Sublime Text 2/Packages/XML/XSL.tmLanguage -->
+
+					<key>include</key>
+					<string>text.xml</string>
+				</dict>
+			</array>
+		</dict>
+<!-- HTML -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.html:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
+				</dict>
+			</array>
+		</dict>
+<!-- CSS -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.css:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.css</string>
+				</dict>
+			</array>
+		</dict>
+<!-- LESS -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.less:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.less</string>
+				</dict>
+			</array>
+		</dict>
+<!-- JS -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.js:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+<!-- Ruby -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.rb:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.ruby</string>
+				</dict>
+			</array>
+		</dict>
+<!-- ERB -->
+		<dict>
+			<key>begin</key>
+			<string>^([^ ].*\.erb:)$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^[^ ]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#line-numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.html.ruby</string>
+				</dict>
+			</array>
+		</dict>
+<!-- default. -->
+		<dict>
+			<key>match</key>
+			<string>^([^ ].*):$</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.filename.find-in-files</string>
+				</dict>
+			</dict>
+		</dict>
+
+<!-- this is the initial settings for this file -- (I think declaration order defines precedence) -->
+<!-- keeping it here for unrecognized / configured filetypes -->
+
+		<dict>
+			<key>match</key>
+			<string>^ +([0-9]+) </string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.line-number.find-in-files</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^ +([0-9]+):</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.line-number.match.find-in-files</string>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+
+<!-- stuff in the "repository" is just the line number matching that were originally in the file -->
+
+	<key>repository</key>
+	<dict>
+		<key>line-numbers</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>^ +([0-9]+) </string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.line-number.find-in-files</string>
+						</dict>
+					</dict>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^ +([0-9]+):</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.line-number.match.find-in-files</string>
+						</dict>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>text.find-in-files</string>
+</dict>
+</plist>
