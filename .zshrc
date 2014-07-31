@@ -20,7 +20,7 @@ cless() {
 
 dsize() { du -h -d 1 "$*" 2> /dev/null | gsort -h ; }
 
-export EDITOR="subl -w"
+export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
@@ -36,7 +36,7 @@ unsetopt extendedglob # Disable extended pattern matching so # and other special
 setopt nobanghist # Disable ZSH interpreting !
 
 # Zsh aliases
-alias zshrc='subl ~/.zshrc'
+alias zshrc="${EDITOR} ~/.zshrc"
 alias reload='source ~/.zshrc'
 alias rake='nocorrect noglob rake'
 alias rspec='nocorrect rspec'
@@ -110,7 +110,9 @@ alias hm='h rake db:migrate && hr'
 
 # Other aliases
 alias mou='open -a Mou'
-alias s.='subl .'
+alias e.="${EDITOR} ."
+alias s.="subl ."
+alias a.="atom ."
 alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
