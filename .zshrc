@@ -149,7 +149,7 @@ save_function()
 save_function chruby old_chruby
 
 chruby() {
-  old_chruby $*
+  old_chruby $@
   PATH=./bin:$PATH
 }
 
