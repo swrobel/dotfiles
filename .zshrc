@@ -9,12 +9,13 @@ tabname() {
   printf "\e]1;$1\a"
 }
 
+# Colorized less output
 cless() {
-  pygmentize $1 > /dev/null 2>&1
+  highlight -O ansi $1 > /dev/null 2>&1
   if [ $? -eq 0 ];then
-    pygmentize -f terminal256 -O style=native $1 | /usr/bin/less -R
+    highlight -O ansi -c stdout $1 | /usr/bin/less -R
   else
-    /usr/bin/less $1
+    /usr/bin/less $*
   fi
 }
 
@@ -118,7 +119,7 @@ alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
 # If pygments is installed, always use colorful less command
-command -v pygmentize > /dev/null 2>&1
+command -v highlight > /dev/null 2>&1
 if [ $? -eq 0 ];then
   alias less='cless'
 fi
