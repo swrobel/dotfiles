@@ -117,14 +117,20 @@ alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
-PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
-DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
 # If pygments is installed, always use colorful less command
 command -v pygmentize > /dev/null 2>&1
 if [ $? -eq 0 ];then
   alias less='cless'
 fi
+
+# If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
+command -v gln > /dev/null 2>&1
+if [ $? -eq 0 ];then
+  alias ln='gln --relative'
+fi
+
+PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
+DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
 # https://github.com/postmodern/chruby/wiki/Implementing-an-'after-use'-hook
