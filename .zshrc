@@ -5,6 +5,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git terminalapp)
 source $ZSH/oh-my-zsh.sh
 
+# Change name of terminal tab
 tabname() {
   printf "\e]1;$1\a"
 }
