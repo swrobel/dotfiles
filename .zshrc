@@ -20,7 +20,12 @@ cless() {
   fi
 }
 
-dsize() { du -h -d 1 "$*" 2> /dev/null | gsort -h ; }
+# Show size of all subdirectories in current directory and sort by size descending
+# du args: -h = human-readable, -d 1 = go one level deep
+# gsort args: -h = human sort, -r = reverse sort so it's descending
+dsize() {
+  du -h -d 1 "$@" 2> /dev/null | gsort -hr
+}
 
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
