@@ -10,6 +10,21 @@ tabname() {
   printf "\e]1;$1\a"
 }
 
+# Run less if passed a file, otherwise ls
+ls_or_less() {
+  local ls_cmd="ls -G" # -G = colorized output
+  local less_cmd="less"
+  local last_arg=$argv[$#argv]
+
+  if [ -f "$last_arg" ]; then
+    # input is a file, send it to less to view
+    eval "$less_cmd $@"
+  else
+    # input, if any is passed to ls
+    eval "$ls_cmd $@"
+  fi
+}
+
 # Colorized less output
 cless() {
   highlight -O ansi $1 > /dev/null 2>&1
@@ -52,7 +67,6 @@ alias zshrc="${EDITOR} ~/.zshrc"
 alias reload='source ~/.zshrc'
 alias rake='nocorrect noglob rake'
 alias rspec='nocorrect rspec'
-alias which='type -p'
 
 # Git aliases
 alias gco='git checkout'
@@ -120,12 +134,18 @@ alias hl='h logs -t'
 alias hr='h restart'
 alias hm='h rake db:migrate && hr'
 
+# ls aliases
+alias l='ls_or_less'
+alias ll='l -lh' # -h = human-readable filesizes
+alias la='l -A' # -A = show dotfiles but not . & ..
+alias lla='l -lAh'
+
 # Other aliases
+alias which='type -p'
 alias mou='open -a Mou'
 alias e.="${EDITOR} ."
 alias s.="subl ."
 alias a.="atom ."
-alias lla='ll -A'
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 
