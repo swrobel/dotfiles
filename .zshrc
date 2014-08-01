@@ -24,7 +24,12 @@ cless() {
 # du args: -h = human-readable, -d 1 = go one level deep
 # gsort args: -h = human sort, -r = reverse sort so it's descending
 dsize() {
-  du -h -d 1 "$@" 2> /dev/null | gsort -hr
+  command -v gsort > /dev/null 2>&1
+  if [ $? -eq 0 ];then
+    du -h -d 1 "$@" 2> /dev/null | gsort -hr
+  else
+    echo "Missing command gsort. Please brew install coreutils."
+  fi
 }
 
 export EDITOR="subl"
@@ -128,12 +133,16 @@ alias vup='vagrant up && vagrant ssh'
 command -v highlight > /dev/null 2>&1
 if [ $? -eq 0 ];then
   alias less='cless'
+else
+  echo "Missing command highlight for syntax-highlighted less alias. Please brew install highlight."
 fi
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 command -v gln > /dev/null 2>&1
 if [ $? -eq 0 ];then
   alias ln='gln --relative'
+else
+  echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
 PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
