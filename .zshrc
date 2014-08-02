@@ -10,6 +10,19 @@ tabname() {
   printf "\e]1;$1\a"
 }
 
+# Remove a directory from PATH
+path_remove() {
+  PATH=${PATH/":$1"/} # delete any instances in the middle or at the end
+  PATH=${PATH/"$1:"/} # delete any instances at the beginning
+}
+
+# Add input to beginning of PATH unless it is already in it or it doesn't exist
+path_add() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    PATH="$1:$PATH"
+  fi
+}
+
 # Run less if passed a file, otherwise ls
 ls_or_less() {
   local ls_cmd="ls -G" # -G = colorized output
@@ -184,8 +197,11 @@ save_function()
 save_function chruby old_chruby
 
 chruby() {
+  # Run chruby and let it do its path manipulation
   old_chruby $@
-  PATH=./bin:$PATH
+  # Make sure ./bin is first in PATH
+  path_remove ./bin
+  path_add ./bin
 }
 
 chruby ruby-2.1
