@@ -142,7 +142,7 @@ alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
 
 # Heroku aliases
 alias h='heroku'
-alias hc='h console'
+alias hc='h run console'
 alias hl='h logs -t'
 alias hr='h restart'
 alias hm='h rake db:migrate && hr'
