@@ -60,6 +60,7 @@ dsize() {
   fi
 }
 
+# ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
@@ -70,6 +71,7 @@ if [ $? -eq 0 ];then
   export JAVA_HOME="$(/usr/libexec/java_home)"
 fi
 export GOPATH=~/.go
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 unsetopt sharehistory # Don't share history between terminal windows
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
