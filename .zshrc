@@ -60,6 +60,12 @@ dsize() {
   fi
 }
 
+# Run a webserver in the current directory
+serve() {
+  port="${1:-8000}"
+  ruby -run -e httpd . -p $port
+}
+
 # ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
