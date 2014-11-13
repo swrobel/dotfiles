@@ -170,6 +170,7 @@ alias s.="subl ."
 alias a.="atom ."
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
+alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
 
 # If pygments is installed, always use colorful less command
 command -v highlight > /dev/null 2>&1
