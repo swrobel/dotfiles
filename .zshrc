@@ -182,7 +182,7 @@ fi
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 command -v gln > /dev/null 2>&1
 if [ $? -eq 0 ];then
-  alias ln='gln --relative'
+  alias ln='gln -s --relative'
 else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
