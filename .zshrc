@@ -86,8 +86,6 @@ setopt nobanghist # Disable ZSH interpreting !
 # Zsh aliases
 alias zshrc="${EDITOR} ~/.zshrc"
 alias reload='source ~/.zshrc'
-alias rake='nocorrect noglob rake'
-alias rspec='nocorrect rspec'
 
 # Git aliases
 alias gco='git checkout'
@@ -137,7 +135,7 @@ alias gpt='gp --tags'
 alias grad='g remote add'
 alias grrm='g remote rm'
 
-# Rails aliases
+# Ruby/Rails aliases
 alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
 alias rtest='ruby -Itest'
 alias devlog='tail -f log/development.log'
@@ -150,6 +148,9 @@ alias bil="b install --local" # Install gems from vendor/cache
 alias bu="b update"
 alias bp="b package" # Cache downloaded but not-yet-installed gems in vendor/cache
 alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
+alias rake='nocorrect noglob rake'
+alias rspec='nocorrect rspec'
+alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
 
 # Heroku aliases
 alias h='heroku'
