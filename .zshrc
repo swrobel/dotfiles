@@ -216,5 +216,3 @@ chruby() {
   path_remove ./bin
   path_add ./bin
 }
-
-chruby ruby-2.1
