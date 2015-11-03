@@ -22,7 +22,6 @@ brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
 brew cask install cloak
-brew cask install dropbox
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
@@ -47,3 +46,5 @@ brew cask install vagrant
 brew cask install vivaldi
 brew cask install vlc
 brew cask install xtrafinder
+
+echo "Manually install Typinator 5.9 & Dropbox"
