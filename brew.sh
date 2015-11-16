@@ -47,4 +47,7 @@ brew cask install vivaldi
 brew cask install vlc
 brew cask install xtrafinder
 
+brew tap caskroom/fonts
+brew cask install font-hack
+
 echo "Manually install Typinator 5.9 & Dropbox"
