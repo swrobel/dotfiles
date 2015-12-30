@@ -25,16 +25,14 @@ path_add() {
 
 # Run less if passed a file, otherwise ls
 ls_or_less() {
-  local ls_cmd="ls -G" # -G = colorized output
-  local less_cmd="less"
   local last_arg=$argv[$#argv]
 
   if [ -f "$last_arg" ]; then
     # input is a file, send it to less to view
-    eval "$less_cmd $@"
+    less "$@"
   else
     # input, if any is passed to ls
-    eval "$ls_cmd $@"
+    ls -G "$@" # -G = colorized output
   fi
 }
 
