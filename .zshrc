@@ -152,6 +152,7 @@ alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
 alias rake='nocorrect noglob rake'
 alias rspec='nocorrect rspec'
 alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
+alias ruby-install-cleanup='ruby-install --cleanup'
 
 # Heroku aliases
 alias h='heroku'
@@ -216,4 +217,8 @@ chruby() {
   # Make sure ./bin is first in PATH
   path_remove ./bin
   path_add ./bin
+}
+
+ruby-install-no-rdoc() {
+  ruby-install-cleanup $@ -- --disable-install-rdoc
 }
