@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
-plugins=(git terminalapp)
+plugins=(git terminalapp chruby)
 source $ZSH/oh-my-zsh.sh
 
 # Change name of terminal tab
@@ -199,6 +199,13 @@ DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# Get chruby to run before the prompt prints
+# https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
+if [[ $PS1 ]]; then
+  precmd_functions+=("chruby_auto")
+  preexec_functions=${preexec_functions:#"chruby_auto"}
+fi
 
 save_function()
 {
