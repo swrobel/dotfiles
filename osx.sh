@@ -58,6 +58,9 @@ sudo systemsetup -setrestartfreeze on
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Restore Terminal tabs after quitting & restarting
+defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool true
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
