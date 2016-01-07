@@ -136,10 +136,14 @@ alias grad='g remote add'
 alias grrm='g remote rm'
 
 # Ruby/Rails aliases
-alias update_migrations='be rake railties:install:migrations && be rake db:migrate'
 alias rtest='ruby -Itest'
 alias devlog='tail -f log/development.log'
-alias rdbm='be rake db:migrate'
+alias rake='nocorrect noglob rake'
+alias rdbm='rake db:migrate'
+alias update_migrations='rake railties:install:migrations && rdbm'
+alias rspec='nocorrect rspec'
+alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
+alias ruby-install-cleanup='ruby-install --cleanup'
 # Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
 alias b='bundle'
 alias be='b exec'
@@ -148,10 +152,6 @@ alias bil="b install --local" # Install gems from vendor/cache
 alias bu="b update"
 alias bp="b package" # Cache downloaded but not-yet-installed gems in vendor/cache
 alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
-alias rake='nocorrect noglob rake'
-alias rspec='nocorrect rspec'
-alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
-alias ruby-install-cleanup='ruby-install --cleanup'
 
 # Heroku aliases
 alias h='heroku'
