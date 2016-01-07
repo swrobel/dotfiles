@@ -1,3 +1,3 @@
 ---
 BUNDLE_PATH: vendor/bundle
-BUNDLE_JOBS: '4'
+BUNDLE_JOBS: `sysctl -n hw.ncpu`
