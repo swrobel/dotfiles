@@ -141,6 +141,8 @@ alias devlog='tail -f log/development.log'
 alias rake='nocorrect noglob rake'
 alias rdbm='rake db:migrate'
 alias update_migrations='rake railties:install:migrations && rdbm'
+alias rg='rails g'
+alias rgm='rg migration'
 alias rspec='nocorrect rspec'
 alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
 alias ruby-install-cleanup='ruby-install --cleanup'
