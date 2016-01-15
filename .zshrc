@@ -129,7 +129,8 @@ alias gph='gp heroku master'
 alias gpb='gp && gph'
 alias gpf='gp -f'
 alias gpbf='gpf && gph -f'
-alias gpp='gp prod master'
+alias gpp='gp production master'
+alias gps='gp staging master'
 alias gppf='gpp -f'
 alias gclean='g clean -df' # Remove all untracked files & directories
 alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
