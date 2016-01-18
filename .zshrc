@@ -64,6 +64,11 @@ serve() {
   ruby -run -e httpd . -p $port
 }
 
+heroku_migrate() {
+  heroku rake db:migrate $@
+  heroku restart $@
+}
+
 # ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
@@ -165,7 +170,7 @@ alias h='heroku'
 alias hc='h run console'
 alias hl='h logs -t'
 alias hr='h restart'
-alias hm='h rake db:migrate && hr'
+alias hm='heroku_migrate'
 
 # ls aliases
 alias l='ls_or_less'
