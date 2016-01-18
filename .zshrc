@@ -138,6 +138,7 @@ alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 alias gpt='gp --tags'
 alias grad='g remote add'
 alias grrm='g remote rm'
+alias grv='g remote -v'
 
 # Ruby/Rails aliases
 alias rtest='ruby -Itest'
