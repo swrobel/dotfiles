@@ -69,6 +69,16 @@ heroku_migrate() {
   heroku restart $@
 }
 
+# Add reload command which runs unload then load
+launchctl() {
+  if [ $1 = "reload" ];then
+    /bin/launchctl unload ${@:2}
+    /bin/launchctl load ${@:2}
+  else
+    /bin/launchctl $@
+  fi
+}
+
 # ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
