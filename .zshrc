@@ -175,9 +175,9 @@ alias hm='heroku_migrate'
 
 # ls aliases
 alias l='ls_or_less'
-alias ll='l -lh' # -h = human-readable filesizes
-alias la='l -A' # -A = show dotfiles but not . & ..
-alias lla='l -lAh'
+alias ll='ls -lh' # -h = human-readable filesizes
+alias la='ls -A' # -A = show dotfiles but not . & ..
+alias lla='ls -lAh'
 
 # Other aliases
 alias which='type -p'
