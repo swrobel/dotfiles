@@ -112,6 +112,9 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable smart quotes & dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
