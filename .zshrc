@@ -173,6 +173,8 @@ alias ruby-install-cleanup='ruby-install --cleanup'
 # Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
 alias b='bundle'
 alias be='b exec'
+alias bc='b clean'
+alias bo='b outdated'
 alias bi="b install --path vendor" # Install gems to vendor/ruby
 alias bil="b install --local" # Install gems from vendor/cache
 alias bu="b update"
