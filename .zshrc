@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
-plugins=(git terminalapp chruby)
+plugins=(terminalapp chruby)
 source $ZSH/oh-my-zsh.sh
 
 # Change name of terminal tab
@@ -144,12 +144,12 @@ alias gsp='git stash pop'
 alias gst='git stash -u'
 alias gcl='git clone'
 alias gph='gp heroku master'
-alias gpb='gp && gpp'
 alias gpf='gp --force-with-lease'
-alias gpbf='gpf && gpp --force-with-lease'
 alias gpp='gp production master'
 alias gps='gp staging'
 alias gppf='gpp --force-with-lease'
+alias gpb='gp && gpp'
+alias gpbf='gpf && gppf'
 alias gclean='g clean -df' # Remove all untracked files & directories
 alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 alias gpt='gp --tags'
