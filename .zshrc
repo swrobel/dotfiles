@@ -79,6 +79,16 @@ launchctl() {
   fi
 }
 
+# Run atom-beta if installed, otherwise atom
+atom_or_beta() {
+  atom-beta -v > /dev/null 2>&1
+  if [ $? -eq 0 ];then
+    atom-beta $@
+  else
+    atom $@
+  fi
+}
+
 # ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
@@ -199,8 +209,12 @@ alias lla='ls -lAh'
 alias which='type -p'
 alias mou='open -a Mou'
 alias e.="${EDITOR} ."
+alias s="subl"
 alias s.="subl ."
-alias a.="atom ."
+alias a="atom_or_beta"
+alias a.="atom_or_beta ."
+alias st="stree"
+alias st.="stree ."
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
