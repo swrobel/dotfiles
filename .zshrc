@@ -232,10 +232,13 @@ DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-RUBIES+=(
-  /usr/local/Cellar/rubinius/*
-  /usr/local/Cellar/jruby/*
-)
+if [ -d "/usr/local/Cellar/rubinius/" ];then
+  RUBIES+=(/usr/local/Cellar/rubinius/*)
+fi
+
+if [ -d "/usr/local/Cellar/jruby/" ];then
+  RUBIES+=(/usr/local/Cellar/jruby/*)
+fi
 
 # Get chruby to run before the prompt prints
 # https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
