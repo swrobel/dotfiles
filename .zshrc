@@ -182,11 +182,14 @@ alias rgm='rg migration'
 alias rspec='nocorrect rspec'
 alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
 alias ruby-install-cleanup='ruby-install --cleanup'
-# Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
+alias i='invoker'
+alias is='invoker start'
 alias b='bundle'
 alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
+
+# Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
 alias bi="b install --path vendor" # Install gems to vendor/ruby
 alias bil="b install --local" # Install gems from vendor/cache
 alias bu="b update"
