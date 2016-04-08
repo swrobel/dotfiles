@@ -11,6 +11,7 @@ brew install python3
 brew install ruby-build
 brew install speedtest_cli
 brew install terminal-notifier
+brew install trash
 brew install wget --with-iri
 brew install zsh
 

@@ -112,6 +112,7 @@ alias zshrc="${EDITOR} ~/.zshrc"
 alias reload='source ~/.zshrc'
 
 # Git aliases
+alias g='git'
 alias gco='git checkout'
 alias gp='git push'
 alias gf='git fetch'
@@ -223,7 +224,7 @@ alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
 alias top='top -o cpu'
-alias brup='brew upgrade && brew cleanup'
+alias brup='brew upgrade && brew cleanup && brew cask cleanup'
 
 # If pygments is installed, always use colorful less command
 command -v highlight > /dev/null 2>&1
