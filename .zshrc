@@ -211,6 +211,9 @@ alias hrp='hr -r production'
 alias hrs='hr -r staging'
 alias hmp='hm -r production'
 alias hms='hm -r staging'
+alias hrun='h run'
+alias hrunp='hrun -r production'
+alias hruns='hrun -r staging'
 
 # ls aliases
 alias l='ls_or_less'
