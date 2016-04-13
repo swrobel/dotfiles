@@ -180,6 +180,7 @@ alias rdbtp='rake db:test:prepare'
 alias update_migrations='rake railties:install:migrations && rdbm'
 alias rg='rails g'
 alias rgm='rg migration'
+alias rc='rails c'
 alias rspec='nocorrect rspec'
 alias gem='GEM_HOME=$GEM_ROOT gem' # Install gems to ~/.rubies instead of ~/.gem
 alias ruby-install-cleanup='ruby-install --cleanup'
