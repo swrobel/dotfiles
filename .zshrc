@@ -233,6 +233,7 @@ alias a="atom_or_beta"
 alias a.="atom_or_beta ."
 alias st="stree"
 alias st.="stree ."
+alias o.="open ."
 alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
