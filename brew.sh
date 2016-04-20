@@ -12,6 +12,7 @@ brew install ruby-build
 brew install speedtest_cli
 brew install terminal-notifier
 brew install trash
+brew install rmtrash
 brew install wget --with-iri
 brew install zsh
 

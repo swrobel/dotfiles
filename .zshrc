@@ -223,6 +223,11 @@ alias ll='ls -lh' # -h = human-readable filesizes
 alias la='ls -A' # -A = show dotfiles but not . & ..
 alias lla='ls -lAh'
 
+# rm aliases
+alias rm='rmtrash'
+alias rmdir='rmdirtrash'
+alias sudo='sudo '
+
 # Other aliases
 alias which='type -p'
 alias mou='open -a Mou'
