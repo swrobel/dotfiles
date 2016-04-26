@@ -230,6 +230,7 @@ alias sudo='sudo '
 
 # Other aliases
 alias which='type -p'
+alias null='&> /dev/null'
 alias mou='open -a Mou'
 alias e.="${EDITOR} ."
 alias s="subl"
