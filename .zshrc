@@ -114,7 +114,7 @@ alias reload='source ~/.zshrc'
 # Git aliases
 alias g='git'
 alias gco='git checkout'
-alias gp='git push'
+alias gp='git push -u'
 alias gf='git fetch'
 alias gd='git -p status -v -v'
 alias gds='git diff HEAD --stat=150,80'
