@@ -162,8 +162,8 @@ alias gpp='gp production master'
 alias gppf='gpp --force-with-lease'
 alias gps='gp staging'
 alias gpsf='gps --force-with-lease'
-alias gpb='gp && gpp'
-alias gpbf='gpf && gppf'
+alias gpb='gpo && gpp'
+alias gpbf='gpof && gppf'
 alias gclean='g clean -df' # Remove all untracked files & directories
 alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 alias gpt='gp --tags'
