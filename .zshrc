@@ -196,6 +196,7 @@ alias b='bundle'
 alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
+alias ub='gem update bundler && gem clean bundler'
 
 # Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
 alias bi="b install --path vendor" # Install gems to vendor/ruby
