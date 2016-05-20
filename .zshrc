@@ -101,6 +101,7 @@ if [ $? -eq 0 ];then
 fi
 export GOPATH=~/.go
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export PYTHON_PATH=~/Library/Python/3.5
 source $HOME/.env_vars
 
 unsetopt sharehistory # Don't share history between terminal windows
@@ -269,7 +270,7 @@ else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
-PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin
+PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$PYTHON_PATH/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
