@@ -225,6 +225,9 @@ alias hms='hm -r staging'
 alias hrun='h run'
 alias hrunp='hrun -r production'
 alias hruns='hrun -r staging'
+alias hcf='h config'
+alias hcfp='hcf -r production'
+alias hcfs='hcf -r staging'
 
 # ls aliases
 alias l='ls_or_less'
