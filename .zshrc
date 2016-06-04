@@ -172,6 +172,8 @@ alias grad='g remote add'
 alias grau='grad upstream'
 alias grrm='g remote rm'
 alias grv='g remote -v'
+alias gauc='git update-index --assume-unchanged'
+alias gac='git update-index --no-assume-unchanged'
 
 # Ruby/Rails aliases
 alias rtest='ruby -Itest'
