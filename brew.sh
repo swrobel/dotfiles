@@ -39,7 +39,6 @@ brew cask install radiant-player
 brew cask install recordit
 brew cask install seil
 brew cask install skype
-brew cask install soundcleod
 brew cask install sourcetree
 brew cask install spotify
 brew cask install spotify-notifications
