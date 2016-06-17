@@ -1,5 +1,6 @@
 brew install chruby
 brew install coreutils
+brew install diff-so-fancy
 brew install exiftool
 brew install git
 brew install heroku-toolbelt
