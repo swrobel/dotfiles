@@ -7,6 +7,7 @@ brew install heroku-toolbelt
 brew install highlight
 brew install lesspipe
 brew install mackup
+brew install mailhog
 brew install openssl
 brew install python3
 brew install ruby-build
