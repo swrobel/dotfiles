@@ -174,6 +174,7 @@ alias grrm='g remote rm'
 alias grv='g remote -v'
 alias gauc='git update-index --assume-unchanged'
 alias gac='git update-index --no-assume-unchanged'
+alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstream to origin/current-branch
 
 # Ruby/Rails aliases
 alias rtest='ruby -Itest'
