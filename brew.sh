@@ -29,12 +29,12 @@ brew cask install cloak
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
+brew cask install haroopad
 brew cask install istat-menus
 brew cask install kaleidoscope
 brew cask install karabiner
 brew cask install lastpass
 brew cask install libreoffice
-brew cask install mou
 brew cask install quip
 brew cask install radiant-player
 brew cask install recordit
