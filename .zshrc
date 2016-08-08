@@ -262,6 +262,7 @@ alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
 alias top='top -o cpu'
 alias brup='brew upgrade && brew cleanup && brew cask cleanup'
 alias gateway='netstat -rn | grep default'
+alias gping='ping -i 5 g.co'
 
 # If pygments is installed, always use colorful less command
 command -v highlight > /dev/null 2>&1
