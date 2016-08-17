@@ -29,7 +29,6 @@ brew cask install cloak
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
-brew cask install haroopad
 brew cask install istat-menus
 brew cask install kaleidoscope
 brew cask install karabiner

@@ -247,7 +247,6 @@ alias sudo='sudo '
 # Other aliases
 alias which='type -p'
 alias null='&> /dev/null'
-alias haroo='open -a Haroopad'
 alias e.="${EDITOR} ."
 alias s="subl"
 alias s.="subl ."
