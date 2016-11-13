@@ -102,6 +102,7 @@ fi
 export GOPATH=~/.go
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PYTHON_PATH=~/Library/Python/3.5
+export ANDROID_HOME=/usr/local/opt/android-sdk
 source $HOME/.env_vars
 
 unsetopt sharehistory # Don't share history between terminal windows
