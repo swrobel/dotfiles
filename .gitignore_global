@@ -3,3 +3,4 @@
 /.bundle/
 Procfile.dev
 invoker.ini
+/node_modules/
