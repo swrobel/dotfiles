@@ -10,7 +10,7 @@ brew install mackup
 brew install mailhog
 brew install openssl
 brew install python3
-brew install ruby-build
+brew install ruby-install
 brew install terminal-notifier
 brew install trash
 brew install rmtrash
