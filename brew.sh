@@ -24,6 +24,7 @@ brew cask install bartender
 brew cask install bettertouchtool
 brew cask install cloak
 brew cask install firefox
+brew cask install fluid
 brew cask install flux
 brew cask install google-chrome
 brew cask install istat-menus
