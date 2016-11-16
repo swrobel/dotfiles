@@ -26,11 +26,13 @@ brew cask install cloak
 brew cask install firefox
 brew cask install fluid
 brew cask install flux
+brew cask install franz
 brew cask install google-chrome
 brew cask install istat-menus
 brew cask install kaleidoscope
 brew cask install lastpass
 brew cask install libreoffice
+brew cask install opera
 brew cask install quip
 brew cask install recordit
 brew cask install skype
