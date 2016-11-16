@@ -9,6 +9,7 @@ brew install lesspipe
 brew install mackup
 brew install mailhog
 brew install openssl
+brew install postgresql
 brew install python3
 brew install ruby-install
 brew install terminal-notifier
