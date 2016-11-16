@@ -44,6 +44,7 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install vivaldi
 brew cask install vlc
+brew cask install whatsapp
 
 brew tap caskroom/fonts
 brew cask install font-hack
