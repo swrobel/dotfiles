@@ -185,6 +185,7 @@ alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstrea
 alias rtest='ruby -Itest'
 alias devlog='tail -f log/development.log'
 alias pumalog='tail -f ~/Library/Logs/puma-dev.log'
+alias pumakill='pkill -USR1 puma-dev'
 alias rake='nocorrect noglob rake'
 alias rdbm='rake db:migrate'
 alias rdbtm='RAILS_ENV=test rake db:migrate'
