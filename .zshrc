@@ -295,6 +295,19 @@ DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
+# Latest ruby version directory is always unversioned
+if [ -d "/usr/local/Cellar/ruby/" ];then
+  RUBIES+=(/usr/local/Cellar/ruby/*)
+fi
+
+# For older ruby versions that are put in directories like "ruby23"
+for dir in /usr/local/Cellar/ruby[0-9]*
+do
+  if [ -d $dir ];then
+    RUBIES+=($dir/*)
+  fi
+done
+
 if [ -d "/usr/local/Cellar/rubinius/" ];then
   RUBIES+=(/usr/local/Cellar/rubinius/*)
 fi
@@ -310,8 +323,7 @@ if [[ $PS1 ]]; then
   preexec_functions=${preexec_functions:#"chruby_auto"}
 fi
 
-save_function()
-{
+save_function() {
   local ORIG_FUNC="$(declare -f $1)"
   local NEWNAME_FUNC="$2${ORIG_FUNC#$1}"
   eval "$NEWNAME_FUNC"
