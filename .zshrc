@@ -269,6 +269,7 @@ alias top='top -o cpu'
 alias brup='brew upgrade && brew cleanup && brew cask cleanup'
 alias gateway='netstat -rn | grep default'
 alias gping='ping -i 5 g.co'
+alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 # If pygments is installed, always use colorful less command
 command -v highlight > /dev/null 2>&1
