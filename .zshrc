@@ -208,13 +208,7 @@ alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
-
-# Below from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
-alias bi="b install --path vendor" # Install gems to vendor/ruby
-alias bil="b install --local" # Install gems from vendor/cache
 alias bu="b update"
-alias bp="b package" # Cache downloaded but not-yet-installed gems in vendor/cache
-alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
 
 # Heroku aliases
 alias h='heroku'
@@ -250,6 +244,17 @@ alias rmdir='rmdirtrash'
 alias realrm='\rm'
 alias sudo='sudo '
 
+# Homebrew aliases
+alias brup='brew upgrade && brew cleanup && brew cask cleanup'
+alias bi='brew install'
+alias bci='brew cask install'
+alias bs='brew search'
+alias binf='brew info'
+alias bcinf='brew cask info'
+alias bl='brew list'
+alias bh='brew home'
+alias bch='brew cask home'
+
 # Other aliases
 alias which='type -p'
 alias null='&> /dev/null'
@@ -265,7 +270,6 @@ alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
 alias top='top -o cpu'
-alias brup='brew upgrade && brew cleanup && brew cask cleanup'
 alias gateway='netstat -rn | grep default'
 alias gping='ping -i 5 g.co'
 alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
