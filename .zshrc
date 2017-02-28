@@ -208,7 +208,8 @@ alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bu="b update"
+alias bu='b update'
+alias ug='gem update --system'
 
 # Heroku aliases
 alias h='heroku'
