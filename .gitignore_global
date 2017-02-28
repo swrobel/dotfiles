@@ -1,6 +1,5 @@
 .DS_Store
 /vendor/bundle/
 /.bundle/
-Procfile.dev
 invoker.ini
 /node_modules/
