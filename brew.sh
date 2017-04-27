@@ -3,7 +3,7 @@ brew install coreutils
 brew install diff-so-fancy
 brew install exiftool
 brew install git
-brew install heroku-toolbelt
+brew install heroku
 brew install highlight
 brew install lesspipe
 brew install mackup
@@ -25,25 +25,24 @@ brew cask install bartender
 brew cask install bettertouchtool
 brew cask install cloak
 brew cask install firefox
-brew cask install fluid
-brew cask install flux
-brew cask install franz
 brew cask install google-chrome
+brew cask install iina
+brew cask install invisor-lite # Media Info
 brew cask install istat-menus
 brew cask install kaleidoscope
 brew cask install lastpass
 brew cask install libreoffice
 brew cask install opera
 brew cask install quip
+brew cask install rambox
 brew cask install recordit
 brew cask install skype
 brew cask install sourcetree
 brew cask install spotify
 brew cask install spotify-notifications
 brew cask install virtualbox
-brew cask install vagrant
 brew cask install vivaldi
-brew cask install vlc
+brew cask install webcatalog
 brew cask install whatsapp
 
 brew tap caskroom/fonts
