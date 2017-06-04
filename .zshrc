@@ -308,9 +308,9 @@ if [ -d "/usr/local/Cellar/ruby/" ];then
   RUBIES+=(/usr/local/Cellar/ruby/*)
 fi
 
-# For older ruby versions that are put in directories like "ruby23"
+# For older ruby versions that are put in directories like "ruby@2.3"
 unsetopt nomatch # Disable warning if there are no matches for the glob below
-for dir in /usr/local/Cellar/ruby[0-9]*
+for dir in /usr/local/Cellar/ruby@[.0-9]*
 do
   if [ -d $dir ];then
     RUBIES+=($dir/*)
