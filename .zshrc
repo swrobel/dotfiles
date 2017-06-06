@@ -247,15 +247,16 @@ alias sudo='sudo '
 
 # Homebrew aliases
 alias brup='brew upgrade && brew cleanup && brew cask cleanup'
-alias bi='brew install'
+alias bri='brew install'
+alias bru='brew uninstall'
 alias bci='brew cask install'
 alias bcu='brew cask uninstall'
 alias bcr='brew cask reinstall --force'
-alias bs='brew search'
-alias binf='brew info'
+alias brs='brew search'
+alias brinf='brew info'
 alias bcinf='brew cask info'
-alias bl='brew list'
-alias bh='brew home'
+alias brl='brew list'
+alias brh='brew home'
 alias bch='brew cask home'
 
 # Other aliases
