@@ -246,7 +246,8 @@ alias realrm='\rm'
 alias sudo='sudo '
 
 # Homebrew aliases
-alias brup='brew upgrade && brew cleanup && brew cask cleanup'
+alias brclean='brew cleanup && brew cask cleanup'
+alias brup='brew upgrade && brclean'
 alias bri='brew install'
 alias bru='brew uninstall'
 alias bci='brew cask install'
