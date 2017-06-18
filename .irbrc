@@ -1,3 +1,7 @@
+require 'irb/ext/save-history'
+IRB.conf[:HISTORY_FILE] = "#{Dir.pwd}/.irb-history"
+IRB.conf[:SAVE_HISTORY] = 200
+
 # Project-specific .irbrc 
 if Dir.pwd != File.expand_path("~")
   local_irbrc = File.expand_path '.irbrc'

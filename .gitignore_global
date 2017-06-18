@@ -2,3 +2,4 @@
 /vendor/bundle/
 /.bundle/
 /node_modules/
+.irb-history
