@@ -1,8 +1,14 @@
+if defined? ::Rails
+  def r!
+    reload!
+  end
+end
+
 require 'irb/ext/save-history'
 IRB.conf[:HISTORY_FILE] = "#{Dir.pwd}/.irb-history"
 IRB.conf[:SAVE_HISTORY] = 200
 
-# Project-specific .irbrc 
+# Project-specific .irbrc
 if Dir.pwd != File.expand_path("~")
   local_irbrc = File.expand_path '.irbrc'
   if File.exist? local_irbrc
@@ -10,4 +16,3 @@ if Dir.pwd != File.expand_path("~")
     load local_irbrc
   end
 end
-
