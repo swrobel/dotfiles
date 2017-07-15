@@ -4,6 +4,8 @@ if defined? ::Rails
   end
 end
 
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+
 require 'irb/ext/save-history'
 IRB.conf[:HISTORY_FILE] = "#{Dir.pwd}/.irb-history"
 IRB.conf[:SAVE_HISTORY] = 200
