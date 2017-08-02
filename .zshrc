@@ -180,6 +180,13 @@ alias gauc='git update-index --assume-unchanged'
 alias gac='git update-index --no-assume-unchanged'
 alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstream to origin/current-branch
 
+# yarn aliases
+alias y='yarn'
+alias ya='y add'
+alias yrm='y remove'
+alias yu='y upgrade'
+alias yo='y outdated'
+
 # Ruby aliases
 alias rtest='ruby -Itest'
 alias rake='nocorrect noglob rake'
@@ -195,6 +202,7 @@ alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
 alias bu='b update'
 alias bur='bu --ruby'
+alias by='bundle && yarn'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
