@@ -173,6 +173,7 @@ alias gclean='g clean -df' # Remove all untracked files & directories
 alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 alias gpt='gp --tags'
 alias grad='g remote add'
+alias gradd='grad'
 alias grau='grad upstream'
 alias grrm='g remote rm'
 alias grv='g remote -v'
