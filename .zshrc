@@ -311,7 +311,7 @@ else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
-PATH=/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$PYTHON_PATH/bin
+PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$PYTHON_PATH/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
