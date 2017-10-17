@@ -23,6 +23,24 @@ path_add() {
   fi
 }
 
+# Colorized less output
+cless() {
+  highlight -O ansi $1 > /dev/null 2>&1
+  if [ $? -eq 0 ];then
+    highlight -O ansi -c stdout $1 | /usr/bin/less -R
+  else
+    /usr/bin/less $*
+  fi
+}
+
+# If pygments is installed, always use colorful less command
+command -v highlight > /dev/null 2>&1
+if [ $? -eq 0 ];then
+  alias less='cless'
+else
+  echo "Missing command highlight for syntax-highlighted less alias. Please brew install highlight."
+fi
+
 # Run less if passed a file, otherwise ls
 ls_or_less() {
   local last_arg=$argv[$#argv]
@@ -33,16 +51,6 @@ ls_or_less() {
   else
     # input, if any is passed to ls
     ls -G "$@" # -G = colorized output
-  fi
-}
-
-# Colorized less output
-cless() {
-  highlight -O ansi $1 > /dev/null 2>&1
-  if [ $? -eq 0 ];then
-    highlight -O ansi -c stdout $1 | /usr/bin/less -R
-  else
-    /usr/bin/less $*
   fi
 }
 
@@ -295,14 +303,6 @@ alias top='top -o cpu'
 alias gateway='netstat -rn | grep default'
 alias gping='ping -i 5 g.co'
 alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
-
-# If pygments is installed, always use colorful less command
-command -v highlight > /dev/null 2>&1
-if [ $? -eq 0 ];then
-  alias less='cless'
-else
-  echo "Missing command highlight for syntax-highlighted less alias. Please brew install highlight."
-fi
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 command -v gln > /dev/null 2>&1
