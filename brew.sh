@@ -5,6 +5,7 @@ brew install exiftool
 brew install git
 brew install heroku
 brew install highlight
+brew install jsawk
 brew install lesspipe
 brew install mackup
 brew install mailhog

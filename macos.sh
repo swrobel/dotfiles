@@ -439,9 +439,11 @@ sudo spctl --master-disable
 ###############################################################################
 
 # Use Hack font
-defaults write org.n8gray.QLColorCode font Hack 
+defaults write org.n8gray.QLColorCode font Hack
 
 # All available themes: http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples
 defaults write org.n8gray.QLColorCode hlTheme orion
+
+mkdir ~/Code
 
 echo "Restart for all changes to take effect."
