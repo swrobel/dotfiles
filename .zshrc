@@ -207,6 +207,8 @@ alias rake='nocorrect noglob rake'
 alias ruby-install-cleanup='\ruby-install --cleanup'
 alias ruby-install='ruby-install-no-rdoc'
 alias ug='gem update --system'
+alias gi='gem install'
+alias gu='gem uninstall'
 
 # Bundler aliases
 alias b='bundle'
