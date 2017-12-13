@@ -12,7 +12,8 @@ brew install mailhog
 brew install openssl
 brew install postgresql
 brew install python3
-brew install ruby-install
+brew install ruby
+brew unlink ruby
 brew install terminal-notifier
 brew install trash
 brew install rmtrash
