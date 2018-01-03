@@ -1,6 +1,10 @@
 if defined? ::Rails
   def r!
-    reload!
+    val = reload!
+    if defined? ::Fabrication
+      Fabrication.clear_definitions
+    end
+    val
   end
 end
 
