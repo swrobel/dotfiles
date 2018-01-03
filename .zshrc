@@ -126,6 +126,7 @@ disable r # Disable zsh builtin 'r' command that tells you the last command you 
 # Zsh aliases
 alias zshrc="${EDITOR} ~/.zshrc"
 alias reload='source ~/.zshrc'
+alias r!='reload'
 
 # Git aliases
 alias g='git'
