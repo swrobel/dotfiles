@@ -352,6 +352,9 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
+# Disable automatic text replacement
+defaults write WebAutomaticTextReplacementEnabled -bool false
+
 ###############################################################################
 # iTunes                                                                      #
 ###############################################################################
