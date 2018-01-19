@@ -198,6 +198,7 @@ alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstrea
 # yarn aliases
 alias y='yarn'
 alias ya='y add'
+alias yad='y add --dev'
 alias yrm='y remove'
 alias yu='y upgrade'
 alias yo='y outdated'
