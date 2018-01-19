@@ -200,6 +200,7 @@ alias y='yarn'
 alias ya='y add'
 alias yad='y add --dev'
 alias yrm='y remove'
+alias yr='y run'
 alias yu='y upgrade'
 alias yo='y outdated'
 
