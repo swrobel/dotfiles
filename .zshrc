@@ -199,10 +199,12 @@ alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstrea
 alias y='yarn'
 alias ya='y add'
 alias yad='y add --dev'
+alias yl='y lint'
+alias yo='y outdated'
 alias yrm='y remove'
 alias yr='y run'
 alias yu='y upgrade'
-alias yo='y outdated'
+alias yt='y test'
 
 # Ruby aliases
 alias rtest='ruby -Itest'
