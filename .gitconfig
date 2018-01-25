@@ -21,7 +21,7 @@
 	ui = true
 [core]
 	excludesfile = /Users/swrobel/.gitignore_global
-	editor = subl -w
+	editor = nano
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
