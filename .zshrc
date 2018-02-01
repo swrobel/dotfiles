@@ -102,7 +102,7 @@ atom_or_beta() {
 }
 
 # ENV vars
-export EDITOR="nano"
+export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
