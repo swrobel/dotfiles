@@ -102,7 +102,7 @@ atom_or_beta() {
 }
 
 # ENV vars
-export EDITOR="subl"
+export EDITOR="nano"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
@@ -122,11 +122,6 @@ unsetopt sharehistory # Don't share history between terminal windows
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
 setopt nobanghist # Disable ZSH interpreting !
 disable r # Disable zsh builtin 'r' command that tells you the last command you entered
-
-# Zsh aliases
-alias zshrc="${EDITOR} ~/.zshrc"
-alias reload='source ~/.zshrc'
-alias r!='reload'
 
 # Git aliases
 alias g='git'
@@ -310,13 +305,17 @@ alias st="stree"
 alias st.="st ."
 alias o="open"
 alias o.="o ."
-alias outin='cd .. && popd'
 alias vup='vagrant up && vagrant ssh'
 alias mkdir='mkdir -p' # Create all necessary directories in hierarchy
 alias top='top -o cpu'
 alias gateway='netstat -rn | grep default'
 alias gping='ping -i 5 g.co'
 alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+# Zsh aliases
+alias zshrc="s ~/.zshrc"
+alias reload='source ~/.zshrc'
+alias r!='reload'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 command -v gln > /dev/null 2>&1
