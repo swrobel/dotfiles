@@ -311,6 +311,9 @@ alias top='top -o cpu'
 alias gateway='netstat -rn | grep default'
 alias gping='ping -i 5 g.co'
 alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+RUBY_PROCESS_NAMES='guard|spring|ruby|rails'
+alias rgrep='ps -o pid,%cpu,%mem,stat,command -p `pgrep -f $RUBY_PROCESS_NAMES` 2> /dev/null'
+alias rkill='pgrep -f $RUBY_PROCESS_NAMES | xargs kill -9'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
