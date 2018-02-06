@@ -9,6 +9,7 @@ brew install jsawk
 brew install lesspipe
 brew install mackup
 brew install mailhog
+brew install nano
 brew install openssl
 brew install postgresql
 brew install python3
