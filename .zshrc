@@ -242,6 +242,7 @@ alias testlog='tail -f log/test.log'
 alias pumalog='tail -f ~/Library/Logs/puma-dev.log'
 alias pumakill='pkill -USR1 puma-dev'
 alias rspec='nocorrect rspec'
+alias rub='rake app:update:bin'
 
 # Heroku aliases
 alias h='heroku'
