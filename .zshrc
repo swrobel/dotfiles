@@ -116,6 +116,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PYTHON_PATH=~/Library/Python/3.5
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export RUBY_CONFIGURE_OPTS=--disable-install-doc
+export NODE_ENV=development
 source $HOME/.env_vars
 
 unsetopt sharehistory # Don't share history between terminal windows
