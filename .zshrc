@@ -268,6 +268,10 @@ alias hcfp='hcf -r production'
 alias hcfs='hcf -r staging'
 alias hh='h help'
 
+# Rubocop aliases
+alias cop='rubocop --parallel'
+alias copa='rubocop --auto-correct'
+
 # ls aliases
 alias l='ls_or_less'
 alias ll='ls -lh' # -h = human-readable filesizes
