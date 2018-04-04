@@ -324,6 +324,9 @@ alias rebuild_open_with='/System/Library/Frameworks/CoreServices.framework/Frame
 RUBY_PROCESS_NAMES='guard|spring|ruby|rails|rspec|puma'
 alias rgrep='ps -o pid,%cpu,%mem,stat,command -p `pgrep -f $RUBY_PROCESS_NAMES` 2> /dev/null'
 alias rkill='pgrep -f $RUBY_PROCESS_NAMES | xargs kill -9'
+NODE_PROCESS_NAMES='webpack-dev-server'
+alias ngrep='ps -o pid,%cpu,%mem,stat,command -p `pgrep -f $NODE_PROCESS_NAMES` 2> /dev/null'
+alias nkill='pgrep -f $NODE_PROCESS_NAMES | xargs kill -9'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
