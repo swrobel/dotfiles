@@ -81,6 +81,10 @@ heroku_migrate() {
   heroku restart $@
 }
 
+heroku_console() {
+  heroku run $@ -- rails console -- --simple-prompt
+}
+
 # Add reload command which runs unload then load
 launchctl() {
   if [ $1 = "reload" ];then
@@ -249,7 +253,7 @@ alias rub='rake app:update:bin'
 
 # Heroku aliases
 alias h='heroku'
-alias hc='h run console'
+alias hc='heroku_console'
 alias hl='h logs -t'
 alias hr='h restart'
 alias hm='heroku_migrate'
