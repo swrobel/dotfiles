@@ -219,14 +219,14 @@ alias gi='gem install'
 alias gu='gem uninstall'
 
 # Bundler aliases
-alias b='bundle'
+alias b='bundle --without production'
 alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
 alias bu='b update'
 alias bur='bu --ruby'
-alias by='bundle && yarn'
+alias by='b && y'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
