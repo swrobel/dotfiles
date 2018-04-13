@@ -285,7 +285,7 @@ alias lla='ls -lAh'
 
 # rm aliases
 alias rm='rmtrash'
-alias rmdir='rmdirtrash'
+alias rmdir='rmtrash'
 alias realrm='\rm'
 alias sudo='sudo '
 
