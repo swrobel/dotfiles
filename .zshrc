@@ -207,6 +207,7 @@ alias yo='y outdated'
 alias yrm='y remove'
 alias yr='y run'
 alias yu='y upgrade'
+alias yui='y upgrade-interactive'
 alias yt='y test'
 
 # Ruby aliases
