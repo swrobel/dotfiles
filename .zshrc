@@ -221,11 +221,11 @@ alias gu='gem uninstall'
 
 # Bundler aliases
 alias b='bundle --without production'
-alias be='b exec'
-alias bc='b clean'
-alias bo='b outdated'
+alias be='bundle exec'
+alias bc='bundle clean'
+alias bo='bundle outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bu='b update'
+alias bu='bundle update'
 alias bur='bu --ruby'
 alias by='b && y'
 
