@@ -1,3 +1,4 @@
 ---
 BUNDLE_PATH: vendor/bundle
 BUNDLE_JOBS: `sysctl -n hw.ncpu`.chomp.to_i + 1
+BUNDLE_WITHOUT: production
