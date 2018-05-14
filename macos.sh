@@ -105,6 +105,8 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write bluetoothaudiod "Enable AAC codec" -bool true
+defaults write bluetoothaudiod "Enable AptX codec" -bool true
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
