@@ -290,8 +290,8 @@ alias la='ls -A' # -A = show dotfiles but not . & ..
 alias lla='ls -lAh'
 
 # rm aliases
-alias rm='rmtrash'
-alias rmdir='rmtrash'
+alias rm='trash -F'
+alias rmdir='trash -F'
 alias realrm='\rm'
 alias sudo='sudo '
 

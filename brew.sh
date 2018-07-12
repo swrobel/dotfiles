@@ -17,7 +17,6 @@ brew install ruby
 brew unlink ruby
 brew install terminal-notifier
 brew install trash
-brew install rmtrash
 brew install wget --with-iri
 brew install zsh
 
