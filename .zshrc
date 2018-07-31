@@ -256,6 +256,7 @@ alias rspec='nocorrect rspec'
 alias rub='rake app:update:bin'
 alias rpp='rake parallel:prepare'
 alias rps='rake parallel:spec'
+alias rpps='rpp && rps'
 
 # Heroku aliases
 alias h='heroku'
