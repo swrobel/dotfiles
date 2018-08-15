@@ -279,6 +279,7 @@ alias hcf='h config'
 alias hcfp='hcf -r production'
 alias hcfs='hcf -r staging'
 alias hh='h help'
+alias hrc='heroku autocomplete --refresh-cache'
 
 # Rubocop aliases
 alias cop='rubocop --parallel'
