@@ -299,7 +299,7 @@ alias sudo='sudo '
 
 # Homebrew aliases
 alias br='brew'
-alias brclean='br cleanup && br cask cleanup'
+alias brclean='br cleanup'
 alias brup='br upgrade && brclean'
 alias bri='br install'
 alias bru='br uninstall'
