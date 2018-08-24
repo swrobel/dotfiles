@@ -314,6 +314,9 @@ alias brl='{ br ls --versions ; bcl } | sort'
 alias brh='br home'
 alias bch='br cask home'
 alias bro='br outdated'
+alias brsr='br services restart'
+alias brss='br services start'
+alias brsp='br services stop'
 
 # Other aliases
 alias which='type -p'
