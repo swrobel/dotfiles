@@ -2,20 +2,26 @@ brew install chruby
 brew install coreutils
 brew install diff-so-fancy
 brew install exiftool
+brew install fd
+brew install fzf
 brew install git
 brew install heroku
 brew install highlight
+brew install htop
 brew install jsawk
 brew install lesspipe
 brew install mackup
 brew install mailhog
 brew install nano
+brew install ncdu
 brew install openssl
 brew install postgresql
+brew install prettyping
 brew install python3
 brew install ruby
 brew unlink ruby
 brew install terminal-notifier
+brew install tldr
 brew install trash
 brew install wget --with-iri
 brew install zsh
