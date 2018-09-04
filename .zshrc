@@ -348,6 +348,7 @@ alias rkill='pgrep -f $RUBY_PROCESS_NAMES | xargs kill -9'
 NODE_PROCESS_NAMES='webpack-dev-server'
 alias ngrep='ps -o pid,%cpu,%mem,stat,command -p `pgrep -f $NODE_PROCESS_NAMES` 2> /dev/null'
 alias nkill='pgrep -f $NODE_PROCESS_NAMES | xargs kill -9'
+alias help='tldr'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
