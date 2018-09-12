@@ -322,6 +322,7 @@ alias bro='br outdated'
 alias brsr='br services restart'
 alias brss='br services start'
 alias brsp='br services stop'
+alias brdep='brew uses --installed'
 
 # Other aliases
 alias which='type -p'
