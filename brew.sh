@@ -32,6 +32,7 @@ brew cask install atom
 brew cask install bartender
 brew cask install cloak
 brew cask install firefox
+brew cask install flycut
 brew cask install google-chrome
 brew cask install iina
 brew cask install invisor-lite # Media Info
