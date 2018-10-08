@@ -30,7 +30,6 @@ brew tap caskroom/cask
 brew cask install appcleaner
 brew cask install atom
 brew cask install bartender
-brew cask install bettertouchtool
 brew cask install cloak
 brew cask install firefox
 brew cask install google-chrome
@@ -59,4 +58,4 @@ brew cask install font-hack
 brew tap colindean/fonts-nonfree
 brew cask install font-microsoft-office
 
-echo "Manually install Typinator 5.9 & Dropbox"
+echo "Manually install BetterTouchTool 2.48, Typinator 5.9 & Dropbox"
