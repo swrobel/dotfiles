@@ -1,5 +1,6 @@
 1. `cd ~/`
 1. `ln -sf Code/dotfiles/.* ~/` (ignore errors, files link fine)
+1. `rm .git` (remove .git directory that may have been symlinked from here)
 1. `Code/dotfiles/macos.sh`
 1. Reboot
 1. Install XCode
