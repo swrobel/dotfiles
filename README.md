@@ -8,4 +8,5 @@
 1. `Code/dotfiles/brew.sh`
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 1. Re-link .zshrc because it's overwritten by oh-my-zsh `ln -sf Code/dotfiles/.zshrc ~/`
+1. `mackup restore`
 1. Install [quartz filters](https://github.com/doekman/Apple-Quartz-Filters/releases)
