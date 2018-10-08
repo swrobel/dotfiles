@@ -8,6 +8,7 @@ brew install git
 brew install heroku
 brew install highlight
 brew install htop
+brew install hub
 brew install jsawk
 brew install lesspipe
 brew install mackup
@@ -49,6 +50,8 @@ brew cask install skype
 brew cask install sourcetree
 brew cask install spotify
 brew cask install spotify-notifications
+brew cask install sublime-merge
+brew cask install sublime-text
 brew cask install virtualbox
 brew cask install vivaldi
 brew cask install webcatalog
