@@ -5,7 +5,6 @@ brew install exiftool
 brew install fd
 brew install fzf
 brew install git
-brew install heroku
 brew install highlight
 brew install htop
 brew install hub
@@ -60,6 +59,8 @@ brew cask install font-hack
 
 brew tap colindean/fonts-nonfree
 brew cask install font-microsoft-office
+
+brew install heroku/brew/heroku
 
 mv /Applications/Spotify\ Notifications.app /Applications/SNotifications.app
 
