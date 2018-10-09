@@ -24,6 +24,7 @@ brew install terminal-notifier
 brew install tldr
 brew install trash
 brew install wget --with-iri
+brew install yarn
 brew install zsh
 
 brew tap caskroom/cask
