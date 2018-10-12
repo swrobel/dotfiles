@@ -51,7 +51,6 @@ brew cask install spotify
 brew cask install spotify-notifications
 brew cask install sublime-merge
 brew cask install sublime-text
-brew cask install virtualbox
 brew cask install vivaldi
 brew cask install whatsapp
 
