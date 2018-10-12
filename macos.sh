@@ -74,6 +74,9 @@ defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes as they’re annoying when typing code
 defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 
+defaults write -g AppleHighlightColor -int 1 # Orange
+defaults write -g AppleHighlightColor -string "0.000000 0.650293 0.658228 Other" # Turquoise
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
