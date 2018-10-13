@@ -43,6 +43,7 @@ brew cask install kaleidoscope
 brew cask install lastpass
 brew cask install libreoffice
 brew cask install mediainfo
+brew cask install nightowl
 brew cask install postico
 brew cask install quip
 brew cask install recordit
