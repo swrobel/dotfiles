@@ -110,6 +110,14 @@ fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
+enable-dark-mode() {
+  defaults write "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance false
+}
+
+disable-dark-mode() {
+  defaults delete "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance
+}
+
 # ENV vars
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
