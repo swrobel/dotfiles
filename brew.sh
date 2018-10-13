@@ -36,6 +36,7 @@ brew cask install firefox
 brew cask install fluid
 brew cask install flycut
 brew cask install google-chrome
+brew cask install highsierramediakeyenabler
 brew cask install iina
 brew cask install istat-menus
 brew cask install kaleidoscope
