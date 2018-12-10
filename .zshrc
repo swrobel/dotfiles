@@ -363,6 +363,7 @@ alias ngrep='ps -o pid,%cpu,%mem,stat,command -p `pgrep -f $NODE_PROCESS_NAMES` 
 alias nkill='pgrep -f $NODE_PROCESS_NAMES | xargs kill -9'
 alias help='tldr'
 alias dui='ncdu'
+alias flushdns='sudo killall -HUP mDNSResponder'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
