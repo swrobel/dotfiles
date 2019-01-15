@@ -387,6 +387,17 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
+# Set default folder exclusions
+sudo tmutil addexclusion -p /usr/local
+sudo tmutil addexclusion -p ~/.dropbox
+sudo tmutil addexclusion -p ~/.gem
+sudo tmutil addexclusion -p ~/Code
+sudo tmutil addexclusion -p ~/Downloads
+sudo tmutil addexclusion -p ~/Dropbox
+sudo tmutil addexclusion -p ~/Library/Application\ Support
+sudo tmutil addexclusion -p ~/Library/Caches
+
+
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
