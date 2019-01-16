@@ -244,6 +244,7 @@ alias ub='gem update bundler && gem clean bundler'
 alias bu='b update'
 alias bur='bu --ruby'
 alias by='b && y'
+alias bub='bu --bundler'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
