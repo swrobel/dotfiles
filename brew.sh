@@ -3,6 +3,7 @@ brew install coreutils
 brew install diff-so-fancy
 brew install exiftool
 brew install fd
+brew install ffmpeg
 brew install fzf
 brew install git
 brew install highlight
