@@ -9,7 +9,6 @@ brew install git
 brew install highlight
 brew install htop
 brew install hub
-brew install jsawk
 brew install lesspipe
 brew install mackup
 brew install mailhog

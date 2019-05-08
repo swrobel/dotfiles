@@ -2,11 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
-typeset +gx -A GITHUB
-GITHUB[user]=swrobel
-GH_BASE_DIR=$HOME/Code
-GH_FETCH_REPOS="true"
-plugins=(terminalapp chruby gh)
+plugins=(terminalapp chruby)
 source $ZSH/oh-my-zsh.sh
 
 # Change name of terminal tab
