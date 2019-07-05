@@ -364,6 +364,8 @@ alias nkill='pgrep -f $NODE_PROCESS_NAMES | xargs kill -9'
 alias help='tldr'
 alias dui='ncdu'
 alias flushdns='sudo killall -HUP mDNSResponder'
+alias pgpid='realrm /usr/local/var/postgres/postmaster.pid'
+alias pgrestart='brew services restart postgresql'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
