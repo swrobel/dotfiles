@@ -1,0 +1,4 @@
+-d postgresql
+--skip-sprockets
+--skip-test
+--skip-system-test
