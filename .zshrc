@@ -371,6 +371,7 @@ alias pgrestart='brew services restart postgresql'
 alias zshrc="s ~/.zshrc"
 alias reload='source ~/.zshrc'
 alias r!='reload'
+alias tab='tabname'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 command -v gln > /dev/null 2>&1
