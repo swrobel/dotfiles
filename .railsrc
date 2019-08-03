@@ -1,4 +1,5 @@
 -d postgresql
+--skip-spring
 --skip-sprockets
 --skip-test
 --skip-system-test
