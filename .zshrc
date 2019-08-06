@@ -81,6 +81,10 @@ heroku_console() {
   heroku run $@ -- rails console -- --simple-prompt
 }
 
+rails_scaffold_without_views() {
+  rails g scaffold $@ --skip-template-engine
+}
+
 # Add reload command which runs unload then load
 launchctl() {
   if [ $1 = "reload" ];then
@@ -256,6 +260,8 @@ alias update_migrations='rake railties:install:migrations && rdbm'
 alias rg='rails g'
 alias rd='rails d'
 alias rgm='rg migration'
+alias rgs='rg scaffold'
+alias rgsv='rails_scaffold_without_views'
 alias rc='rails c'
 alias i='invoker'
 alias is='invoker start'
