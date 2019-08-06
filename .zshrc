@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
-plugins=(terminalapp chruby)
+plugins=(chruby)
 source $ZSH/oh-my-zsh.sh
 
 # Change name of terminal tab
