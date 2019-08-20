@@ -33,3 +33,5 @@
 	first-run = false
 [commit]
 	template = /Users/swrobel/.stCommitMsg
+[status]
+	showUntrackedFiles = all
