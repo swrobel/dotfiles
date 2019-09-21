@@ -165,8 +165,8 @@ alias gb='git branch'
 alias gbd='git branch -D'
 alias gba='git branch -a'
 alias grp='git remote prune origin'
-alias gbp='git branch --merged master | grep -v "\ master" | xargs -n 1 git branch -d && grp'
-alias gbpd='git branch --merged dev | grep -v "\ master" | grep -v "\ dev" | xargs -n 1 git branch -d && grp'
+alias gbo='git branch --list --format "%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)"' # Local branches with no remote (orphans)
+alias gbp='grp && for branch in `gbo`; do gbd "$branch"; done' # Prune orphaned branches
 alias gcb='git checkout -b'
 alias gm='git merge --no-edit'
 alias gmm='gm master'
