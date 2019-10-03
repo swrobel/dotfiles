@@ -241,10 +241,10 @@ alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bu='b update'
-alias bur='bu --ruby'
+alias bu="b update | awk '!/^(Using|Fetching)/'"
+alias bur='b update --ruby'
 alias by='b && y'
-alias bub='bu --bundler'
+alias bub='b update --bundler'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
