@@ -345,7 +345,6 @@ alias bcup='brc upgrade'
 alias brup='br upgrade && bcup && brclean'
 
 # Other aliases
-alias which='type -p'
 alias null='&> /dev/null'
 alias e.="${EDITOR} ."
 alias s="subl"
