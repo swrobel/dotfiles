@@ -118,6 +118,10 @@ disable-dark-mode() {
   defaults delete "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance
 }
 
+bu() {
+  bundle update "$@" | awk '!/^(Using|Fetching)/'
+}
+
 # ENV vars
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
@@ -241,7 +245,6 @@ alias be='b exec'
 alias bc='b clean'
 alias bo='b outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bu="b update | awk '!/^(Using|Fetching)/'"
 alias bur='b update --ruby'
 alias by='b && y'
 alias bub='b update --bundler'
