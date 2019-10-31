@@ -118,8 +118,8 @@ disable-dark-mode() {
   defaults delete "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance
 }
 
-bu() {
-  bundle update "$@" | awk '!/^(Using|Fetching)/'
+bundle_filtered() {
+  bundle "$@" | awk '!/^(Using|Fetching)/'
 }
 
 # ENV vars
@@ -240,14 +240,15 @@ alias gi='gem install'
 alias gu='gem uninstall'
 
 # Bundler aliases
-alias b='bundle'
-alias be='b exec'
-alias bc='b clean'
-alias bo='b outdated'
+alias b='bundle_filtered install'
+alias bu='bundle_filtered update'
+alias be='bundle exec'
+alias bc='bundle clean'
+alias bo='bundle outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bur='b update --ruby'
+alias bur='bundle update --ruby'
 alias by='b && y'
-alias bub='b update --bundler'
+alias bub='bundle update --bundler'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
