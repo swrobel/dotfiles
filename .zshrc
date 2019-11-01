@@ -7,7 +7,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Change name of terminal tab
 tabname() {
-  printf "\e]1;$1\a"
+  if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then
+    printf "\e]1;$1\a"
+  elif [ "$TERM_PROGRAM" = 'iTerm.app' ]; then
+    echo -ne "\033]0;$1\007"
+  fi
 }
 
 # Remove a directory from PATH
