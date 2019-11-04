@@ -5,13 +5,19 @@ DISABLE_AUTO_TITLE="true"
 plugins=(chruby)
 source $ZSH/oh-my-zsh.sh
 
+# Default terminal tab to current directory
+precmd() {
+  tabname
+}
+
 # Change name of terminal tab
 tabname() {
-  if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then
-    printf "\e]1;$1\a"
-  elif [ "$TERM_PROGRAM" = 'iTerm.app' ]; then
-    echo -ne "\033]0;$1\007"
+  if [ ! -z "$1" ]; then
+    TABNAME=$1
   fi
+  # Set to current directory if custom name hasn't been given
+  local title=${TABNAME-${PWD##*/}}
+  echo -ne "\e]1;$title\a"
 }
 
 # Remove a directory from PATH
@@ -455,3 +461,6 @@ chruby() {
 ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
 }
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
