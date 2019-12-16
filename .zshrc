@@ -256,9 +256,9 @@ alias be='bundle exec'
 alias bc='bundle clean'
 alias bo='bundle_filtered outdated'
 alias ub='gem update bundler && gem clean bundler'
-alias bur='bundle update --ruby'
+alias bur='bundle_filtered update --ruby'
 alias by='b && y'
-alias bub='bundle update --bundler'
+alias bub='bundle_filtered update --bundler'
 
 # Rails aliases
 alias rdbm='rake db:migrate'
