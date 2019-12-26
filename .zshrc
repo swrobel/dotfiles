@@ -153,6 +153,7 @@ source $HOME/.env_vars
 unsetopt sharehistory # Don't share history between terminal windows
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
 setopt nobanghist # Disable ZSH interpreting !
+setopt histignorespace # Don't save commands prepended with space to history
 disable r # Disable zsh builtin 'r' command that tells you the last command you entered
 
 # Git aliases
