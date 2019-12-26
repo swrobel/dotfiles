@@ -33,19 +33,10 @@ path_add() {
   fi
 }
 
-# Colorized less output
-cless() {
-  highlight -O ansi $1 > /dev/null 2>&1
-  if [ $? -eq 0 ];then
-    highlight -O ansi -c stdout $1 | /usr/bin/less -R
-  else
-    /usr/bin/less $*
-  fi
-}
-
-# If pygments is installed, always use colorful less command
+# If highlight is installed, always use colorful less command
 command -v highlight > /dev/null 2>&1
 if [ $? -eq 0 ];then
+  cless() { highlight -O ansi --failsafe $@ | less -R }
   alias less='cless'
 else
   echo "Missing command highlight for syntax-highlighted less alias. Please brew install highlight."
@@ -60,7 +51,7 @@ ls_or_less() {
     less "$@"
   else
     # input, if any is passed to ls
-    ls -G "$@" # -G = colorized output
+    ls -G ${~@} # -G = colorized output
   fi
 }
 
@@ -320,7 +311,7 @@ alias cop='rubocop --parallel'
 alias copa='rubocop --auto-correct'
 
 # ls aliases
-alias l='ls_or_less'
+alias l='noglob ls_or_less'
 alias ll='ls -lh' # -h = human-readable filesizes
 alias la='ls -A' # -A = show dotfiles but not . & ..
 alias lla='ls -lAh'
