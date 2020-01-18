@@ -1,3 +1,6 @@
+# https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+ulimit -n 20000
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 DISABLE_UPDATE_PROMPT="true"
