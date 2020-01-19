@@ -1,0 +1,10 @@
+windows:
+  - name: lifework
+    root: ~/Code/lw-web
+    layout: main-vertical-flipped
+    panes:
+      - commands:
+        - tabname lifework; clear
+        focus: true
+      - bin/rails console
+      - bin/server

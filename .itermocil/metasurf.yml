@@ -1,0 +1,10 @@
+windows:
+  - name: metasurf
+    root: ~/Code/meta-surf-forecast
+    layout: main-vertical-flipped
+    panes:
+      - commands:
+        - tabname metasurf; clear
+        focus: true
+      - bin/rails console
+      - bin/server
