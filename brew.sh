@@ -63,6 +63,7 @@ brew tap colindean/fonts-nonfree
 brew cask install font-microsoft-office
 
 brew install heroku/brew/heroku
+brew install TomAnthony/brews/itermocil
 
 mv /Applications/Spotify\ Notifications.app /Applications/SNotifications.app
 
