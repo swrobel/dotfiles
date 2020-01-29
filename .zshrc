@@ -223,6 +223,11 @@ alias gauc='git update-index --assume-unchanged'
 alias gac='git update-index --no-assume-unchanged'
 alias gbsu='git branch -u origin/$(git name-rev --name-only HEAD)' # Set upstream to origin/current-branch
 
+# npm aliases
+alias n='npm'
+alias ni='npm i'
+alias unpm= 'npm i -g --force npm'
+
 # yarn aliases
 alias y='yarn'
 alias ya='y add'
