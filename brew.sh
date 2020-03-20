@@ -1,3 +1,4 @@
+brew install bandwhich
 brew install chruby
 brew install coreutils
 brew install diff-so-fancy
@@ -36,13 +37,13 @@ brew cask install firefox
 brew cask install fluid
 brew cask install flycut
 brew cask install google-chrome
-brew cask install highsierramediakeyenabler
 brew cask install iina
 brew cask install istat-menus
 brew cask install kaleidoscope
 brew cask install lastpass
 brew cask install libreoffice
 brew cask install mediainfo
+brew cask install macmediakeyforwarder
 brew cask install nightowl
 brew cask install postico
 brew cask install quip
