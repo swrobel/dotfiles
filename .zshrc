@@ -263,6 +263,8 @@ alias bub='bundle_filtered update --bundler'
 # Rails aliases
 alias rdbm='rake db:migrate'
 alias rdbtm='RAILS_ENV=test rake db:migrate'
+alias rdbc='rake db:create'
+alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
 alias rdbsl='rake db:schema:load_if_ruby db:structure:load_if_sql'
 alias rdbrb='rake db:rollback'
