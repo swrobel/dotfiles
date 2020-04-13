@@ -126,6 +126,21 @@ bundle_filtered() {
   bundle "$@" | awk '!/^(Using|Fetching)/'
 }
 
+# https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
+mv() {
+  if [ "$#" -ne 1 ]; then
+    command mv "$@"
+    return
+  fi
+  if [ ! -f "$1" ]; then
+    command file "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  mv -v "$1" "$newfilename"
+} 
+
 # ENV vars
 export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
