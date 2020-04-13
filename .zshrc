@@ -127,7 +127,7 @@ bundle_filtered() {
 }
 
 # ENV vars
-export EDITOR="subl -w"
+export EDITOR="subl"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
