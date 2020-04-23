@@ -142,7 +142,7 @@ mv() {
 } 
 
 # ENV vars
-export EDITOR="subl"
+export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
