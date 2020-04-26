@@ -37,8 +37,7 @@ path_add() {
 }
 
 # If highlight is installed, always use colorful less command
-command -v highlight > /dev/null 2>&1
-if [ $? -eq 0 ];then
+if [ -x "$(command -v highlight)" ];then
   cless() { highlight -O ansi --failsafe $@ | less -R }
   alias less='cless'
 else
@@ -62,8 +61,7 @@ ls_or_less() {
 # du args: -h = human-readable, -d 1 = go one level deep
 # gsort args: -h = human sort, -r = reverse sort so it's descending
 dsize() {
-  command -v gsort > /dev/null 2>&1
-  if [ $? -eq 0 ];then
+  if [ -x "$(command -v gsort)" ];then
     du -h -d 1 "$@" 2> /dev/null | gsort -hr
   else
     echo "Missing command gsort. Please brew install coreutils."
@@ -99,10 +97,11 @@ launchctl() {
   fi
 }
 
-# Run atom-beta if installed, otherwise atom
-atom_or_beta() {
-  atom-beta -v > /dev/null 2>&1
-  if [ $? -eq 0 ];then
+# Run atom nightly or beta if installed, otherwise atom
+atom_latest() {
+  if [ -x "$(command -v atom-nightly)" ];then
+    atom-nightly $@
+  elif [ -x "$(command -v atom-beta)" ];then
     atom-beta $@
   else
     atom $@
@@ -139,7 +138,7 @@ mv() {
 
   read -ei "$1" newfilename
   mv -v "$1" "$newfilename"
-} 
+}
 
 # ENV vars
 export EDITOR="subl -w"
@@ -379,7 +378,7 @@ alias s="subl"
 alias s.="s ."
 alias sm="smerge"
 alias sm.="sm ."
-alias a="atom_or_beta"
+alias a="atom_latest"
 alias a.="a ."
 alias adump="apm list --installed --bare > ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
 alias aload="apm install --packages-file ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
@@ -418,8 +417,7 @@ alias drmi='docker rmi $(docker images -q)'
 alias drmall='drmc && drmi'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
-command -v gln > /dev/null 2>&1
-if [ $? -eq 0 ];then
+if [ -x "$(command -v gln)" ];then
   alias ln='gln -s --relative'
 else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
