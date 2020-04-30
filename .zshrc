@@ -476,6 +476,7 @@ chruby() {
   # Make sure ./bin is first in PATH
   path_remove ./bin
   path_add ./bin
+  RUBYOPT=-W:no-deprecated
 }
 
 ruby-install-no-rdoc() {
