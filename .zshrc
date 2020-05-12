@@ -477,3 +477,14 @@ ruby-install-no-rdoc() {
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 compctl -g '~/.itermocil/*(:t:r)' itermocil
+
+# Automatically activate virtualenv if available
+function virtualenv_auto() {
+  if [[ -f venv/bin/activate ]]; then
+    source venv/bin/activate
+  fi
+}
+
+if [[ ! "$preexec_functions" == *virtualenv_auto* ]]; then
+  preexec_functions+=("virtualenv_auto")
+fi
