@@ -145,17 +145,9 @@ export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
-# Set JAVA_HOME if java is installed
-/usr/libexec/java_home > /dev/null 2>&1
-if [ $? -eq 0 ];then
-  export JAVA_HOME="$(/usr/libexec/java_home)"
-fi
 export GOPATH=~/.go
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export PYTHON_PATH=~/Library/Python/3.5
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export RUBY_CONFIGURE_OPTS=--disable-install-doc
-export NODE_ENV=development
 source $HOME/.env_vars
 
 unsetopt sharehistory # Don't share history between terminal windows
@@ -423,7 +415,7 @@ else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
-PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$PYTHON_PATH/bin
+PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
