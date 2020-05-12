@@ -4,3 +4,4 @@
 /node_modules/
 .irb-history
 .byebug_history
+/.vscode/
