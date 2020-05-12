@@ -451,8 +451,10 @@ fi
 # Get chruby to run before the prompt prints
 # https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
 if [[ $PS1 ]]; then
-  precmd_functions+=("chruby_auto")
-  preexec_functions=${preexec_functions:#"chruby_auto"}
+  preexec_functions=${preexec_functions//chruby_auto/}
+  if [[ ! "$precmd_functions" == *chruby_auto* ]]; then
+    precmd_functions+=("chruby_auto")
+  fi
 fi
 
 save_function() {
@@ -480,12 +482,13 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 compctl -g '~/.itermocil/*(:t:r)' itermocil
 
 # Automatically activate virtualenv if available
-function virtualenv_auto() {
+VIRTUAL_ENV_DISABLE_PROMPT=1
+virtualenv_auto() {
   if [[ -f venv/bin/activate ]]; then
     source venv/bin/activate
   fi
 }
 
-if [[ ! "$preexec_functions" == *virtualenv_auto* ]]; then
-  preexec_functions+=("virtualenv_auto")
+if [[ ! "$precmd_functions" == *virtualenv_auto* ]]; then
+  precmd_functions+=("virtualenv_auto")
 fi
