@@ -1,0 +1,11 @@
+windows:
+  - name: anthem
+    root: ~/Code/anthem
+    layout: tiled
+    panes:
+      - commands:
+        - tabname anthem; cd client; clear
+        focus: true
+      - cd client; yarn start
+      - cd api; clear
+      - cd api; ./manage.py runserver_plus
