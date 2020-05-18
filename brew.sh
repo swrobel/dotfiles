@@ -37,6 +37,7 @@ brew cask install flycut
 brew cask install google-chrome
 brew cask install iina
 brew cask install istat-menus
+brew cask install iterm2
 brew cask install kaleidoscope
 brew cask install libreoffice
 brew cask install mediainfo
