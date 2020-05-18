@@ -398,6 +398,7 @@ alias dui='ncdu'
 alias flushdns='sudo killall -HUP mDNSResponder'
 alias pgpid='realrm /usr/local/var/postgres/postmaster.pid'
 alias pgrestart='brew services restart postgresql'
+alias it='itermocil'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
