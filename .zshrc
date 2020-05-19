@@ -141,6 +141,13 @@ mv() {
   mv -v "$1" "$newfilename"
 }
 
+# Repeat command until it exits with non-zero code
+until_fail() {
+  while :; do
+    $@ || break
+  done
+}
+
 # ENV vars
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
