@@ -432,7 +432,6 @@ DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # https://github.com/postmodern/chruby/wiki/Implementing-an-'after-use'-hook
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Latest ruby version directory is always unversioned
 if [ -d "/usr/local/Cellar/ruby/" ];then
@@ -457,15 +456,6 @@ if [ -d "/usr/local/Cellar/jruby/" ];then
   RUBIES+=(/usr/local/Cellar/jruby/*)
 fi
 
-# Get chruby to run before the prompt prints
-# https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
-if [[ $PS1 ]]; then
-  preexec_functions=${preexec_functions//chruby_auto/}
-  if [[ ! "$precmd_functions" == *chruby_auto* ]]; then
-    precmd_functions+=("chruby_auto")
-  fi
-fi
-
 save_function() {
   local ORIG_FUNC="$(declare -f $1)"
   local NEWNAME_FUNC="$2${ORIG_FUNC#$1}"
@@ -480,6 +470,17 @@ chruby() {
   path_prepend ./bin
   RUBYOPT=-W:no-deprecated
 }
+
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# Get chruby to run before the prompt prints
+# https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
+if [[ $PS1 ]]; then
+  preexec_functions=${preexec_functions//chruby_auto/}
+  if [[ ! "$precmd_functions" == *chruby_auto* ]]; then
+    precmd_functions+=("chruby_auto")
+  fi
+fi
 
 ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
