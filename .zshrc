@@ -8,11 +8,6 @@ DISABLE_AUTO_TITLE="true"
 plugins=(chruby)
 source $ZSH/oh-my-zsh.sh
 
-# Default terminal tab to current directory
-precmd() {
-  tabname
-}
-
 # Change name of terminal tab
 tabname() {
   if [ ! -z "$1" ]; then
@@ -22,6 +17,7 @@ tabname() {
   local title=${TABNAME-${PWD##*/}}
   echo -ne "\e]1;$title\a"
 }
+add-zsh-hook precmd tabname
 
 # Remove a directory from PATH
 path_remove() {
@@ -428,10 +424,8 @@ fi
 PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-# chruby 'after use' hook to prioritize ./bin before chruby-supplied rubygem bin paths
-# https://github.com/postmodern/chruby/wiki/Implementing-an-'after-use'-hook
-
 source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Latest ruby version directory is always unversioned
 if [ -d "/usr/local/Cellar/ruby/" ];then
@@ -456,35 +450,16 @@ if [ -d "/usr/local/Cellar/jruby/" ];then
   RUBIES+=(/usr/local/Cellar/jruby/*)
 fi
 
-save_function() {
-  local ORIG_FUNC="$(declare -f $1)"
-  local NEWNAME_FUNC="$2${ORIG_FUNC#$1}"
-  eval "$NEWNAME_FUNC"
-}
-
-save_function chruby old_chruby
-
-chruby() {
-  # Run chruby and let it do its path manipulation
-  old_chruby $@
-  path_prepend ./bin
-  RUBYOPT=-W:no-deprecated
-}
-
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
-# Get chruby to run before the prompt prints
+# Get chruby-auto to run before the prompt prints
 # https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
-if [[ $PS1 ]]; then
-  preexec_functions=${preexec_functions//chruby_auto/}
-  if [[ ! "$precmd_functions" == *chruby_auto* ]]; then
-    precmd_functions+=("chruby_auto")
-  fi
-fi
+add-zsh-hook -d preexec chruby_auto
+add-zsh-hook precmd chruby_auto
 
 ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
 }
+
+RUBYOPT=-W:no-deprecated
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 compctl -g '~/.itermocil/*(:t:r)' itermocil
@@ -497,6 +472,10 @@ virtualenv_auto() {
   fi
 }
 
-if [[ ! "$precmd_functions" == *virtualenv_auto* ]]; then
-  precmd_functions+=("virtualenv_auto")
-fi
+add-zsh-hook precmd virtualenv_auto
+
+prepend_bin() {
+  path_prepend ./bin
+}
+
+add-zsh-hook precmd prepend_bin
