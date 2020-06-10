@@ -425,7 +425,35 @@ PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/lo
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# modified version of chruby-auto to allow setting RUBYOPT
+unset RUBY_AUTO_VERSION
+
+function chruby_auto() {
+  local dir="$PWD/" version
+
+  until [[ -z "$dir" ]]; do
+    dir="${dir%/*}"
+
+    if { read -r version <"$dir/.ruby-version"; } 2>/dev/null || [[ -n "$version" ]]; then
+      if [[ "$version" == "$RUBY_AUTO_VERSION" ]]; then return
+      else
+        local rubyopt
+        RUBY_AUTO_VERSION="$version"
+        [[ "$version" == "2.7" ]] && rubyopt=-W:no-deprecated
+        chruby "$version" $rubyopt
+        return $?
+      fi
+    fi
+  done
+
+  if [[ -n "$RUBY_AUTO_VERSION" ]]; then
+    chruby_reset
+    unset RUBY_AUTO_VERSION
+  fi
+}
+
+add-zsh-hook precmd chruby_auto
 
 # Latest ruby version directory is always unversioned
 if [ -d "/usr/local/Cellar/ruby/" ];then
@@ -450,16 +478,9 @@ if [ -d "/usr/local/Cellar/jruby/" ];then
   RUBIES+=(/usr/local/Cellar/jruby/*)
 fi
 
-# Get chruby-auto to run before the prompt prints
-# https://github.com/postmodern/chruby/issues/191#issuecomment-64091397
-add-zsh-hook -d preexec chruby_auto
-add-zsh-hook precmd chruby_auto
-
 ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
 }
-
-RUBYOPT=-W:no-deprecated
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 compctl -g '~/.itermocil/*(:t:r)' itermocil
