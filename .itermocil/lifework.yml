@@ -4,7 +4,7 @@ windows:
     layout: main-vertical-flipped
     panes:
       - commands:
-        - tabname lifework; clear
+          - tabname lifework; clear
         focus: true
-      - bin/rails console
-      - bin/server
+      - tabname lifework; bin/rails console
+      - tabname lifework; bin/server

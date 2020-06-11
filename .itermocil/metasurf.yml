@@ -4,7 +4,7 @@ windows:
     layout: main-vertical-flipped
     panes:
       - commands:
-        - tabname metasurf; clear
+          - tabname metasurf; clear
         focus: true
-      - bin/rails console
-      - bin/server
+      - tabname metasurf; bin/rails console
+      - tabname metasurf; bin/server
