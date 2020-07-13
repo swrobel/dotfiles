@@ -416,6 +416,9 @@ alias drmc='docker rm $(docker ps -a -q)'
 alias drmi='docker rmi $(docker images -q)'
 alias drmall='drmc && drmi'
 
+# Python aliases
+alias pipr='pip install -r requirements.txt -r test-requirements.txt'
+
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 if [ -x "$(command -v gln)" ];then
   alias ln='gln -s --relative'
