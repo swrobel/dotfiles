@@ -366,8 +366,7 @@ alias brsr='br services restart'
 alias brss='br services start'
 alias brsp='br services stop'
 alias brdep='brew uses --installed'
-alias bcup='brc upgrade'
-alias brup='br upgrade && bcup && brclean'
+alias brup='br upgrade && brclean'
 
 # Other aliases
 alias null='&> /dev/null'
