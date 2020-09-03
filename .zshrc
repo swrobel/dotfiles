@@ -404,6 +404,8 @@ alias flushdns='sudo killall -HUP mDNSResponder'
 alias pgpid='realrm /usr/local/var/postgres/postmaster.pid'
 alias pgrestart='brew services restart postgresql'
 alias it='itermocil'
+alias finder_show_dotfiles='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
+alias finder_hide_dotfiles='defaults write com.apple.finder AppleShowAllFiles false && killall Finder'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
