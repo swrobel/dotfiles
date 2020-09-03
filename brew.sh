@@ -5,6 +5,7 @@ brew install diff-so-fancy
 brew install exiftool
 brew install fd
 brew install fzf
+brew install gh
 brew install git
 brew install highlight
 brew install htop
@@ -59,7 +60,5 @@ brew install TomAnthony/brews/itermocil
 
 brew tap federico-terzi/espanso
 brew install espanso
-
-brew install github/gh/gh
 
 mv /Applications/Spotify\ Notifications.app /Applications/SNotifications.app
