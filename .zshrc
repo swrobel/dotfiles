@@ -420,6 +420,7 @@ alias drmall='drmc && drmi'
 
 # Python aliases
 alias pipr='pip install -r requirements.txt -r test-requirements.txt'
+alias pipu='pip install --upgrade pip'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 if [ -x "$(command -v gln)" ];then
