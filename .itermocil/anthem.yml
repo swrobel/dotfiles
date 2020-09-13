@@ -4,8 +4,20 @@ windows:
     layout: tiled
     panes:
       - commands:
-          - tabname anthem; cd client; clear
+          - tabname anthem
+          - cd client
+          - clear
         focus: true
-      - tabname anthem; cd client; yarn start
-      - tabname anthem; cd api; clear
-      - tabname anthem; cd api; ./manage.py runserver_plus
+      - commands:
+          - tabname anthem
+          - cd client
+          - yarn start
+      - commands:
+          - tabname anthem
+          - cd api
+          - clear
+      - commands:
+          - tabname anthem
+          - cd api
+          - clear
+          - venv/bin/python manage.py runserver_plus
