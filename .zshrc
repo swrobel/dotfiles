@@ -419,7 +419,7 @@ alias drmi='docker rmi $(docker images -q)'
 alias drmall='drmc && drmi'
 
 # Python aliases
-alias pipr='pip install -r requirements.txt -r test-requirements.txt'
+alias pipr='pip install -r requirements.txt -r dev-requirements.txt -r test-requirements.txt'
 alias pipu='pip install --upgrade pip'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
