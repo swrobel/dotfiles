@@ -10,7 +10,6 @@ brew install git
 brew install highlight
 brew install htop
 brew install lesspipe
-brew install mackup
 brew install mailhog
 brew install nano
 brew install ncdu
