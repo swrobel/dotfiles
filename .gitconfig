@@ -20,7 +20,7 @@
 [color]
 	ui = true
 [core]
-	excludesfile = /Users/swrobel/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = nano
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
@@ -31,8 +31,6 @@
 	trustExitCode = true
 [diff-so-fancy]
 	first-run = false
-[commit]
-	template = /Users/swrobel/.stCommitMsg
 [status]
 	showUntrackedFiles = all
 [credential]
