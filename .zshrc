@@ -3,6 +3,7 @@ ulimit -n 20000
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
+ZSH_DISABLE_COMPFIX=true
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
 plugins=(chruby)
