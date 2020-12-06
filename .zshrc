@@ -423,6 +423,16 @@ alias drmall='drmc && drmi'
 alias pipr='pip install -r requirements.txt -r dev-requirements.txt -r test-requirements.txt'
 alias pipu='pip install --upgrade pip'
 
+# Django aliases
+alias mp='./manage.py'
+alias mprs='mp runserver_plus'
+alias mpm='mp migrate'
+alias mpmk='mp makemigrations'
+alias mps='mp shell_plus'
+alias mpt='mp test'
+alias mpsd='mp seed'
+alias mpst='mp startapp'
+
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 if [ -x "$(command -v gln)" ];then
   alias ln='gln -s --relative'
