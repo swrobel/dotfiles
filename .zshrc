@@ -421,7 +421,8 @@ alias drmall='drmc && drmi'
 
 # Python aliases
 alias pipr='pip install -r requirements.txt -r dev-requirements.txt -r test-requirements.txt'
-alias pipu='pip install --upgrade pip'
+alias pipu='pipr --upgrade'
+alias upip='pip install --upgrade pip'
 
 # Django aliases
 alias mp='./manage.py'
