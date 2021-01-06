@@ -149,6 +149,8 @@ until_fail() {
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export GOPATH=~/.go
 export ANDROID_HOME=/usr/local/opt/android-sdk
