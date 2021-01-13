@@ -438,8 +438,8 @@ alias mpst='mp startapp'
 alias cw='(cd project/ && celery -A celery_worker worker -l info)'
 
 # CocoaPods aliases
-alias pi='cd ios && pod install && cd ..'
-alias pu='cd ios && pod repo update && pod update && cd ..'
+alias pi='cd ios && pod install --repo-update && cd ..'
+alias pu='cd ios && pod update --repo-update && cd ..'
 
 # If gnu ln is installed, always use it with --relative option so we don't have to provide full path to the source
 if [ -x "$(command -v gln)" ];then
