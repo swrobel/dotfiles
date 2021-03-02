@@ -145,6 +145,14 @@ until_fail() {
   done
 }
 
+sudo() {
+  unset -f sudo
+  if [[ "$(uname)" == 'Darwin' ]] && ! grep 'pam_tid.so' /etc/pam.d/sudo --silent; then
+    sudo sed -i -e '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
+  fi
+  sudo "$@"
+}
+
 # ENV vars
 export EDITOR="subl -w"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
@@ -346,7 +354,6 @@ alias lla='ls -lAh'
 alias rm='trash -F'
 alias rmdir='trash -F'
 alias realrm='\rm'
-alias sudo='sudo '
 
 # Homebrew aliases
 alias br='brew'
