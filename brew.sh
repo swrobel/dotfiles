@@ -22,7 +22,7 @@ brew unlink ruby
 brew install terminal-notifier
 brew install tldr
 brew install trash
-brew install wget --with-iri
+brew install wget
 brew install yarn
 brew install zsh
 
