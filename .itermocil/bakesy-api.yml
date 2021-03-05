@@ -1,0 +1,11 @@
+windows:
+  - name: bakesy-api
+    root: ~/Code/bakesy-api
+    layout: tiled
+    panes:
+      - commands:
+          - tabname bakesy-api; clear
+        focus: true
+      - tabname bakesy-api; bin/rails console
+      - tabname bakesy-api; bin/rails server
+      - tabname bakesy-api; bin/sidekiq
