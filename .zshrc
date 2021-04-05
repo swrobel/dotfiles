@@ -36,7 +36,7 @@ path_prepend() {
 
 # If highlight is installed, always use colorful less command
 if [ -x "$(command -v highlight)" ];then
-  cless() { highlight -O ansi --failsafe $@ | \less -R }
+  cless() { highlight -O ansi --force $@ | \less -R }
   alias less='cless'
 else
   echo "Missing command highlight for syntax-highlighted less alias. Please brew install highlight."
