@@ -35,3 +35,5 @@
 	showUntrackedFiles = all
 [credential]
 	helper = osxkeychain
+[init]
+	defaultBranch = main
