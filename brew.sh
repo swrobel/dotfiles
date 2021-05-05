@@ -17,8 +17,7 @@ brew install openssl
 brew install postgresql
 brew install prettyping
 brew install python3
-brew install ruby
-brew unlink ruby
+brew install ruby@2.7
 brew install terminal-notifier
 brew install tldr
 brew install trash
@@ -38,9 +37,7 @@ brew install --cask iina
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask kaleidoscope
-brew install --cask libreoffice
 brew install --cask mediainfo
-brew install --cask macmediakeyforwarder
 brew install --cask postico
 brew install --cask quip
 brew install --cask skype
@@ -48,6 +45,7 @@ brew install --cask slack
 brew install --cask sourcetree
 brew install --cask spotify
 brew install --cask sublime-text
+brew install --cask visual-studio-code
 brew install --cask whatsapp
 
 brew tap colindean/fonts-nonfree
