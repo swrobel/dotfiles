@@ -37,6 +37,7 @@ brew install --cask iina
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask kaleidoscope
+brew install --cask krisp
 brew install --cask mediainfo
 brew install --cask postico
 brew install --cask quip
