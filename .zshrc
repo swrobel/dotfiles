@@ -246,6 +246,9 @@ alias gauc='git update-index --assume-unchanged'
 alias gac='git update-index --no-assume-unchanged'
 alias gbsu='git branch -u origin/$(git branch --show-current)' # Set upstream to origin/current-branch
 
+# github aliases
+alias ghrc='gh repo clone'
+
 # npm aliases
 alias n='npm'
 alias ni='npm i'
