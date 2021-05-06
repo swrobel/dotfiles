@@ -11,8 +11,10 @@ brew install highlight
 brew install htop
 brew install lesspipe
 brew install mailhog
+brew install mkcert
 brew install nano
 brew install ncdu
+brew install nss
 brew install openssl
 brew install postgresql
 brew install prettyping
