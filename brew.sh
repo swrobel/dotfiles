@@ -37,6 +37,7 @@ brew install --cask firefox
 brew install --cask flycut
 brew install --cask google-chrome
 brew install --cask iina
+brew install --cask imazing
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask kaleidoscope
