@@ -161,7 +161,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export GOPATH=~/.go
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export RUBY_CONFIGURE_OPTS=--disable-install-doc
 source $HOME/.env_vars
 
@@ -467,7 +467,7 @@ else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
-PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin
+PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
