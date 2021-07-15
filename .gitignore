@@ -3,3 +3,5 @@
 /.config/gh/hosts.yml
 /.config/gh/state.yml
 /.config/configstore/nodemon.json
+/.config/configstore/update-notifier-appcenter-cli.json
+/.config/SOLOSHOT/
