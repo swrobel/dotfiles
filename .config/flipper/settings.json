@@ -1,5 +1,5 @@
 {
-  "androidHome": "/opt/android_sdk",
+  "androidHome": "~/Library/Android/sdk",
   "enableAndroid": true,
   "enableIOS": true,
   "enablePhysicalIOS": true,
