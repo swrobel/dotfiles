@@ -1,7 +1,7 @@
 .DS_Store
-/vendor/bundle/
-/.bundle/
-/node_modules/
+**/vendor/bundle/
+**/.bundle/
+**/node_modules/
 .irb-history
 .byebug_history
-/.vscode/
+**/.vscode/
