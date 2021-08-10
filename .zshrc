@@ -175,7 +175,7 @@ disable r # Disable zsh builtin 'r' command that tells you the last command you 
 alias g='git'
 alias gco='git checkout'
 alias gp='git push'
-alias gf='git fetch'
+alias gf='git fetch -p'
 alias gd='git -p status -v -v'
 alias gds='git diff HEAD --stat=150,80'
 alias gr='git rebase'
