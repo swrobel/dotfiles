@@ -1,23 +1,11 @@
 windows:
   - name: anthem
-    root: ~/Code/anthem
-    layout: tiled
+    root: ~/Code/anthem/preauth-app
+    layout: main-vertical
     panes:
       - commands:
           - tabname anthem
-          - cd client
           - clear
         focus: true
-      - commands:
-          - tabname anthem
-          - cd client
-          - yarn start
-      - commands:
-          - tabname anthem
-          - cd api
-          - clear
-      - commands:
-          - tabname anthem
-          - cd api
-          - clear
-          - venv/bin/python manage.py runserver_plus
+      - tabname anthem; make dev-server
+      - tabname anthem; cd ui; npm start
