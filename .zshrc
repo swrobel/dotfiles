@@ -199,7 +199,7 @@ alias grp='git remote prune origin'
 alias gbpm='git branch --merged main | grep -v "\ main" | xargs -n 1 git branch -d && grp'
 alias gbpd='git branch --merged develop | grep -v "\ develop" | xargs -n 1 git branch -d && grp'
 alias gbo='git branch --list --format "%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)"' # Local branches with no remote (orphans)
-alias gbp='grp && for branch in `gbo`; do gbd "$branch"; done && gbpd' # Prune orphaned branches
+alias gbp='grp && for branch in `gbo`; do gbd "$branch"; done && gbpm' # Prune orphaned branches
 alias gcb='git checkout -b'
 alias gm='git merge --no-edit'
 alias gmm='gm main'
