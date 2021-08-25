@@ -245,8 +245,8 @@ alias gradd='grad'
 alias grau='grad upstream'
 alias grrm='g remote rm'
 alias grv='g remote -v'
-alias gauc='git update-index --assume-unchanged'
-alias gac='git update-index --no-assume-unchanged'
+alias gauc='git update-index --skip-worktree'
+alias gac='git update-index --no-skip-worktree'
 alias gbsu='git branch -u origin/$(git branch --show-current)' # Set upstream to origin/current-branch
 
 # github aliases
