@@ -8,4 +8,4 @@ windows:
           - clear
         focus: true
       - tabname anthem; make dev-server
-      - tabname anthem; cd ui; npm start
+      - tabname anthem; make dev-ui
