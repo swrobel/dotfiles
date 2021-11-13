@@ -27,7 +27,6 @@ brew install wget
 brew install yarn
 brew install zsh
 
-brew install --cask 1password
 brew install --cask appcleaner
 brew install --cask bartender
 brew install --cask beardedspice
