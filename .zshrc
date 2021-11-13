@@ -9,6 +9,32 @@ DISABLE_AUTO_TITLE="true"
 plugins=(chruby)
 source $ZSH/oh-my-zsh.sh
 
+# ENV vars
+if [ "$(arch)" = "arm64" ]; then
+  export HOMEBREW_PREFIX=/opt/homebrew
+else
+  export HOMEBREW_PREFIX=/usr/local
+fi
+export EDITOR="subl -w"
+export EC2_HOME="$HOMEBREW_PREFIX/Library/LinkedKegs/ec2-api-tools/jars"
+# Twilight theme
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LSCOLORS="exfxcxdxbxegedabagacad"
+export GOPATH=~/.go
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export RUBY_CONFIGURE_OPTS=--disable-install-doc
+PATH=$HOME/.yarn/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/mysql/bin:$HOMEBREW_PREFIX/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+DYLD_LIBRARY_PATH=$HOMEBREW_PREFIX/mysql/lib:$DYLD_LIBRARY_PATH
+
+test -e "$HOME/.env_vars" && source $HOME/.env_vars
+
+unsetopt sharehistory # Don't share history between terminal windows
+unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
+setopt nobanghist # Disable ZSH interpreting !
+setopt histignorespace # Don't save commands prepended with space to history
+disable r # Disable zsh builtin 'r' command that tells you the last command you entered
+
 # Change name of terminal tab
 tabname() {
   if [ ! -z "$1" ]; then
@@ -152,24 +178,6 @@ sudo() {
   fi
   sudo "$@"
 }
-
-# ENV vars
-export EDITOR="subl -w"
-export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
-# Twilight theme
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LSCOLORS="exfxcxdxbxegedabagacad"
-export GOPATH=~/.go
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export RUBY_CONFIGURE_OPTS=--disable-install-doc
-source $HOME/.env_vars
-
-unsetopt sharehistory # Don't share history between terminal windows
-unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
-setopt nobanghist # Disable ZSH interpreting !
-setopt histignorespace # Don't save commands prepended with space to history
-disable r # Disable zsh builtin 'r' command that tells you the last command you entered
 
 # Git aliases
 alias g='git'
@@ -419,7 +427,7 @@ alias nkill='pgrep -f $NODE_PROCESS_NAMES | xargs kill -9'
 alias help='tldr'
 alias dui='ncdu'
 alias flushdns='sudo killall -HUP mDNSResponder'
-alias pgpid='realrm /usr/local/var/postgres/postmaster.pid'
+alias pgpid='realrm $HOMEBREW_PREFIX/var/postgres/postmaster.pid'
 alias pgrestart='brew services restart postgresql'
 alias it='itermocil'
 alias finder_show_dotfiles='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
@@ -468,10 +476,7 @@ else
   echo "Missing command gln for relative-path ln alias. Please brew install coreutils."
 fi
 
-PATH=$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 
 # modified version of chruby-auto to allow setting RUBYOPT
 unset RUBY_AUTO_VERSION
@@ -503,13 +508,13 @@ function chruby_auto() {
 add-zsh-hook precmd chruby_auto
 
 # Latest ruby version directory is always unversioned
-if [ -d "/usr/local/Cellar/ruby/" ];then
-  RUBIES+=(/usr/local/Cellar/ruby/*)
+if [ -d "$HOMEBREW_PREFIX/Cellar/ruby/" ];then
+  RUBIES+=($HOMEBREW_PREFIX/Cellar/ruby/*)
 fi
 
 # For older ruby versions that are put in directories like "ruby@2.3"
 unsetopt nomatch # Disable warning if there are no matches for the glob below
-for dir in /usr/local/Cellar/ruby@[.0-9]*
+for dir in $HOMEBREW_PREFIX/Cellar/ruby@[.0-9]*
 do
   if [ -d $dir ];then
     RUBIES+=($dir/*)
@@ -517,12 +522,12 @@ do
 done
 setopt nomatch
 
-if [ -d "/usr/local/Cellar/rubinius/" ];then
-  RUBIES+=(/usr/local/Cellar/rubinius/*)
+if [ -d "$HOMEBREW_PREFIX/Cellar/rubinius/" ];then
+  RUBIES+=($HOMEBREW_PREFIX/Cellar/rubinius/*)
 fi
 
-if [ -d "/usr/local/Cellar/jruby/" ];then
-  RUBIES+=(/usr/local/Cellar/jruby/*)
+if [ -d "$HOMEBREW_PREFIX/Cellar/jruby/" ];then
+  RUBIES+=($HOMEBREW_PREFIX/Cellar/jruby/*)
 fi
 
 ruby-install-no-rdoc() {
