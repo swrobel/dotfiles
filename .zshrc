@@ -407,6 +407,7 @@ alias c="code"
 alias c.="c ."
 alias adump="apm list --installed --bare > ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
 alias aload="apm install --packages-file ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
+alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias st="stree"
 alias st.="st ."
 alias o="open"
