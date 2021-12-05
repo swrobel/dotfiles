@@ -505,4 +505,7 @@ defaults write org.n8gray.QLColorCode font Hack
 # All available themes: http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples
 defaults write org.n8gray.QLColorCode hlTheme orion
 
+# Disable Gatekeeper
+sudo spctl --master-disable
+
 echo "Restart for all changes to take effect."
