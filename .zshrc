@@ -463,8 +463,8 @@ alias mpst='mp startapp'
 alias cw='(cd project/ && celery -A celery_worker worker -l info)'
 
 # CocoaPods aliases
-alias pi='cd ios && be pod install --repo-update && cd ..'
-alias pu='cd ios && be pod update --repo-update && cd ..'
+alias pi='cd ios; be pod install --repo-update; cd ..'
+alias pu='cd ios; be pod update --repo-update; cd ..'
 
 # Fastlane aliases
 alias fl='be fastlane'
