@@ -1,6 +1,6 @@
 windows:
   - name: anthem
-    root: ~/Code/anthem/preauth-app
+    root: ~/Code/anthem/priorauth
     layout: main-vertical
     panes:
       - commands:
