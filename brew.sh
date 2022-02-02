@@ -29,7 +29,6 @@ brew install zsh
 
 brew install --cask appcleaner
 brew install --cask bartender
-brew install --cask beardedspice
 brew install --cask bettertouchtool
 brew install --cask dropbox
 brew install --cask firefox
