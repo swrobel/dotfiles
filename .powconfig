@@ -1,5 +1,13 @@
-source /usr/local/share/chruby/chruby.sh
-
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+if [ -d "$HOMEBREW_PREFIX/Cellar/ruby/" ];then
+  RUBIES+=($HOMEBREW_PREFIX/Cellar/ruby/*)
+fi
+for dir in $HOMEBREW_PREFIX/Cellar/ruby@[.0-9]*
+do
+  if [ -d $dir ];then
+    RUBIES+=($dir/*)
+  fi
+done
 if [ -f .ruby-version ]; then
   chruby $(cat .ruby-version)
 else
