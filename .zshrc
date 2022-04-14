@@ -391,6 +391,7 @@ alias bro='br outdated --verbose'
 alias brsr='br services restart'
 alias brss='br services start'
 alias brsp='br services stop'
+alias brsl='br services list'
 alias brdep='brew uses --installed'
 alias brup='br upgrade && brclean'
 
