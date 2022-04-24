@@ -10,10 +10,6 @@ end
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-# Disable 'mutliline' support due to poor pasting performance
-# see https://github.com/ruby/irb/issues/43
-IRB.conf[:USE_MULTILINE] = false
-
 require 'irb/ext/save-history'
 IRB.conf[:HISTORY_FILE] = "#{Dir.pwd}/.irb-history"
 IRB.conf[:SAVE_HISTORY] = 200
