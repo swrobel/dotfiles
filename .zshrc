@@ -24,7 +24,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export GOPATH=~/.go
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export RUBY_CONFIGURE_OPTS=--disable-install-doc
-PATH=$HOME/.yarn/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/mysql/bin:$HOMEBREW_PREFIX/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+PATH=$HOME/.yarn/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/mysql/bin:$HOMEBREW_PREFIX/share/npm/bin:$HOMEBREW_PREFIX/opt/python/libexec/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$GOPATH/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 DYLD_LIBRARY_PATH=$HOMEBREW_PREFIX/mysql/lib:$DYLD_LIBRARY_PATH
 
 test -e "$HOME/.env_vars" && source $HOME/.env_vars
