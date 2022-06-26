@@ -25,6 +25,7 @@ brew install tldr
 brew install trash
 brew install wget
 brew install yarn
+brew install yt-dlp
 brew install zsh
 
 brew install --cask appcleaner
