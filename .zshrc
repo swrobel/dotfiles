@@ -299,7 +299,7 @@ alias by='b && y'
 alias bub='bundle_filtered update --bundler'
 
 # Rails aliases
-alias rdbm='rake db:migrate'
+alias rdbm='rake db:migrate:with_data 2>/dev/null || rake db:migrate 2>/dev/null'
 alias rdbtm='RAILS_ENV=test rake db:migrate'
 alias rdbc='rake db:create'
 alias rdbd='rake db:drop'
