@@ -246,7 +246,8 @@ alias gpdf='gpd --force-with-lease'
 alias gpb='gpo && gpp'
 alias gpbf='gpof && gppf'
 alias gclean='g clean -df' # Remove all untracked files & directories
-alias glog="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
+alias glog='git log --no-merges --pretty="format:%d %Cgreen%an%Creset %ar: %s" origin/main..$(git branch --show-current)'
+alias ggraph="g log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
 alias gpt='gp --tags'
 alias grad='g remote add'
 alias gradd='grad'
