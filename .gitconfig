@@ -38,3 +38,5 @@
 	helper = osxkeychain
 [init]
 	defaultBranch = main
+[rebase]
+	updateRefs = true
