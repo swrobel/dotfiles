@@ -121,17 +121,6 @@ launchctl() {
   fi
 }
 
-# Run atom nightly or beta if installed, otherwise atom
-atom_latest() {
-  if [ -x "$(command -v atom-nightly)" ];then
-    atom-nightly $@
-  elif [ -x "$(command -v atom-beta)" ];then
-    atom-beta $@
-  else
-    atom $@
-  fi
-}
-
 # Use fzf to search history
 fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
@@ -403,12 +392,8 @@ alias s="subl"
 alias s.="s ."
 alias sm="smerge"
 alias sm.="sm ."
-alias a="atom_latest"
-alias a.="a ."
 alias c="code"
 alias c.="c ."
-alias adump="apm list --installed --bare > ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
-alias aload="apm install --packages-file ~/Dropbox/Config/Mac\ Apps/atom-packages.txt"
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias st="stree"
 alias st.="st ."
