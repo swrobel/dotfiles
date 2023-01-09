@@ -286,6 +286,7 @@ alias bo='bundle_filtered outdated'
 alias ub='gem update bundler --default && gem clean bundler'
 alias bur='bundle_filtered update --ruby'
 alias by='b && y'
+alias byu='bu && yu'
 alias bub='bundle_filtered update --bundler'
 
 # Rails aliases
