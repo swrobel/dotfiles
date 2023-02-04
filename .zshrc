@@ -323,6 +323,7 @@ alias rub='rake app:update:bin'
 alias rpp='rake parallel:prepare'
 alias rps='rake parallel:spec'
 alias rpps='rpp && rps'
+alias fs='be foreman start -f Procfile.dev'
 
 # Heroku aliases
 alias h='heroku'
