@@ -351,7 +351,7 @@ alias hrc='heroku autocomplete --refresh-cache'
 
 # Rubocop aliases
 alias cop='rubocop --parallel'
-alias copa='rubocop --auto-correct'
+alias copa='rubocop --autocorrect'
 
 # ls aliases
 alias l='noglob ls_or_less'
