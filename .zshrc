@@ -169,6 +169,10 @@ sudo() {
   sudo "$@"
 }
 
+brew_uninstall_and_autoremove() {
+  br uninstall "$@" && br autoremove
+}
+
 # Git aliases
 alias g='git'
 alias gco='git checkout'
@@ -371,7 +375,7 @@ alias realrm='\rm'
 alias br='brew'
 alias brclean='br cleanup'
 alias bri='br install'
-alias bru='br uninstall && br autoremove'
+alias bru='brew_uninstall_and_autoremove'
 alias brr='br reinstall --force'
 alias bci='bri --cask'
 alias bcu='bru --cask'
