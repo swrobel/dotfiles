@@ -173,7 +173,7 @@ sudo() {
 }
 
 brew_uninstall_and_autoremove() {
-  br uninstall "$@" && br autoremove
+  brew uninstall "$@" && brew autoremove
 }
 
 # Git aliases
