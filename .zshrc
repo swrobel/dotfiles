@@ -453,7 +453,10 @@ ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
 }
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+if [[ $TERM_PROGRAM == "iTerm.app" ]]; then
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+fi
+
 compctl -g '~/.itermocil/*(:t:r)' itermocil
 
 # Automatically activate virtualenv if available
