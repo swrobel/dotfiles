@@ -19,25 +19,23 @@ brew install openssl
 brew install postgresql
 brew install prettyping
 brew install python3
-brew install ruby@2.7
+brew install ruby
 brew install terminal-notifier
 brew install tldr
 brew install trash
 brew install wget
 brew install yarn
 brew install yt-dlp
-brew install zsh
 
 brew install --cask appcleaner
 brew install --cask bartender
 brew install --cask bettertouchtool
 brew install --cask dropbox
+brew install --cask espanso
 brew install --cask firefox
-brew install --cask flycut
 brew install --cask google-chrome
 brew install --cask iina
 brew install --cask imageoptim
-brew install --cask imazing
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask kaleidoscope
@@ -58,6 +56,3 @@ brew install --cask font-microsoft-office
 
 brew install heroku/brew/heroku
 brew install TomAnthony/brews/itermocil
-
-brew tap federico-terzi/espanso
-brew install espanso

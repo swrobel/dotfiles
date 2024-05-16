@@ -8,6 +8,5 @@
 1. `Code/dotfiles/brew.sh`
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 1. Re-link .zshrc/.zprofile because they're overwritten by oh-my-zsh `ln -sf Code/dotfiles/.z* ~/`
-1. `mackup restore`
-1. Install [BetterTouchTool](https://bettertouchtool.net/releases/btt_2.428_recovery_mojave.zip)
+1. Install [Hack Nerd Font FC Ligatured CCG](https://github.com/gaplo917/Ligatured-Hack/releases/download/v3.003%2BNv2.1.0%2BFC%2BJBMv2.242/HackLigatured-v3.003+FC3.1+JBMv2.242.zip)
 1. Install [quartz filters](https://github.com/doekman/Apple-Quartz-Filters/releases)
