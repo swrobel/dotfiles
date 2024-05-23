@@ -163,7 +163,7 @@ alias gl='git pull --rebase --prune --tags --autostash'
 alias gla='gl --all'
 alias gs='git status -s'
 alias gss='git status'
-alias gcom='gco main && gl'
+alias gcom='gco main 2>/dev/null || gco master && gl'
 alias gcomd='gcom && gmd && gp'
 alias gcos='gco stage && gl'
 alias gcod='gco develop && gl'
@@ -179,7 +179,7 @@ alias gbo='git branch --list --format "%(if:equals=[gone])%(upstream:track)%(the
 alias gbp='grp && for branch in `gbo`; do gbd "$branch"; done && gbpm' # Prune orphaned branches
 alias gcb='git checkout -b'
 alias gm='git merge --no-edit'
-alias gmm='gm main'
+alias gmm='gm main 2>/dev/null || gm master'
 alias gmd='gm develop'
 alias gmp='gm production'
 alias gmt='git mergetool'
@@ -474,3 +474,8 @@ prepend_bin() {
 }
 
 add-zsh-hook precmd prepend_bin
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
