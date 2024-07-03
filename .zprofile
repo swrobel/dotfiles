@@ -45,6 +45,10 @@ if [ -d "$HOMEBREW_PREFIX/Cellar/jruby/" ];then
   RUBIES+=($HOMEBREW_PREFIX/Cellar/jruby/*)
 fi
 
+if [ -d "$HOME/.asdf/installs/ruby/" ];then
+  RUBIES+=($HOME/.asdf/installs/ruby/*)
+fi
+
 chruby 3.3
 
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
