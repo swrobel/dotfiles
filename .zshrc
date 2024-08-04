@@ -119,7 +119,7 @@ disable-dark-mode() {
 }
 
 bundle_filtered() {
-  bundle "$@" | awk '!/^(Using|Fetching)/'
+  bundle "$@" # | awk '!/^(Using|Fetching)/'
 }
 
 # https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
