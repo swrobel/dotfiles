@@ -14,6 +14,7 @@ export GOPATH=~/.go
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export RUBY_CONFIGURE_OPTS=--disable-install-doc
 export THOR_MERGE=ksdiff
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 export npm_config_yes=true
 

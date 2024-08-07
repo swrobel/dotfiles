@@ -408,6 +408,7 @@ alias youtube-dl='yt-dlp -f "bv+ba/b"'
 
 # Zsh aliases
 alias zshrc="s ~/.zshrc"
+alias zprofile="s ~/.zprofile"
 alias reload='source ~/.zshrc'
 alias r!='reload'
 alias tab='tabname'
