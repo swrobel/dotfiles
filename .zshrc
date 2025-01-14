@@ -475,6 +475,7 @@ add-zsh-hook precmd virtualenv_auto
 
 prepend_bin() {
   path_prepend ./bin
+  zstyle -e ':completion:*' command-path 'reply=( "$PWD/bin" "$path[@]" )'
 }
 
 add-zsh-hook precmd prepend_bin
