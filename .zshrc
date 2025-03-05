@@ -22,7 +22,7 @@ disable r # Disable zsh builtin 'r' command that tells you the last command you 
 
 # Change name of terminal tab
 tabname() {
-  if [ ! -z "$1" ]; then
+  if [ ! -z "$1" ];then
     TABNAME=$1
   fi
   # Set to current directory if custom name hasn't been given
@@ -40,7 +40,7 @@ path_remove() {
 # Add input to beginning of PATH unless it is already in it or it doesn't exist
 path_prepend() {
   path_remove $1
-  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]];then
     PATH="$1:$PATH"
   fi
 }
@@ -57,7 +57,7 @@ fi
 ls_or_less() {
   local last_arg=$argv[$#argv]
 
-  if [ -f "$last_arg" ]; then
+  if [ -f "$last_arg" ];then
     # input is a file, send it to less to view
     less "$@"
   else
@@ -125,11 +125,11 @@ bundle_filtered() {
 
 # https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
 mv() {
-  if [ "$#" -ne 1 ]; then
+  if [ "$#" -ne 1 ];then
     command mv "$@"
     return
   fi
-  if [ ! -f "$1" ]; then
+  if [ ! -f "$1" ];then
     command file "$@"
     return
   fi
@@ -469,7 +469,7 @@ ruby-install-no-rdoc() {
   ruby-install-cleanup $@ -- --disable-install-rdoc
 }
 
-if [[ $TERM_PROGRAM == "iTerm.app" ]]; then
+if [[ $TERM_PROGRAM == "iTerm.app" ]];then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
@@ -478,7 +478,7 @@ compctl -g '~/.itermocil/*(:t:r)' itermocil
 # Automatically activate virtualenv if available
 VIRTUAL_ENV_DISABLE_PROMPT=1
 virtualenv_auto() {
-  if [[ -f venv/bin/activate ]]; then
+  if [[ -f venv/bin/activate ]];then
     source venv/bin/activate
   fi
 }
