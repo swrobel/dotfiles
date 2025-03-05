@@ -66,6 +66,15 @@ ls_or_less() {
   fi
 }
 
+# Run cursor if available, otherwise code
+cursor_or_code() {
+  if [ -x "$(command -v cursor)" ];then
+    cursor $@
+  else
+    code $@
+  fi
+}
+
 # Show size of all subdirectories in current directory and sort by size descending
 # du args: -h = human-readable, -d 1 = go one level deep
 # gsort args: -h = human sort, -r = reverse sort so it's descending
@@ -390,7 +399,7 @@ alias s="subl"
 alias s.="s ."
 alias sm="smerge"
 alias sm.="sm ."
-alias c="code"
+alias c="cursor_or_code"
 alias c.="c ."
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias st="stree"
