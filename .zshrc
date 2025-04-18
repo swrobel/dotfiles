@@ -428,6 +428,7 @@ alias it='itermocil'
 alias finder_show_dotfiles='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
 alias finder_hide_dotfiles='defaults write com.apple.finder AppleShowAllFiles false && killall Finder'
 alias curl-redirect='curl -Ls -w %{url_effective} -o /dev/null'
+alias curl-json='curl -H "accept: application/json"'
 alias youtube-dl='yt-dlp -f "bv+ba/b"'
 
 # Zsh aliases
