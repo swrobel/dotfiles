@@ -158,14 +158,6 @@ brew_uninstall_and_autoremove() {
   brew uninstall "$@" && brew autoremove
 }
 
-git_pull_and_update() {
-  local last_line=$(gl | tail -1)
-  echo $last_line
-  if [ $last_line != "Already up to date." ];then
-    bin/update
-  fi
-}
-
 # Git aliases
 alias g='git'
 alias gco='git checkout'
@@ -181,12 +173,10 @@ alias gra='git rebase --abort'
 alias grb='git rebase $(gdb)'
 alias gri='gr --interactive'
 alias gl='git pull --rebase --prune --tags --autostash'
-alias glu='git_pull_and_update'
 alias gla='gl --all'
 alias gs='git status -s'
 alias gss='git status'
 alias gcom='gco $(gdb) && gl'
-alias gcomu='gco $(gdb) && glu'
 alias gcomd='gcom && gmd && gp'
 alias gcos='gco stage && gl'
 alias gcod='gco develop && gl'
