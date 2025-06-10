@@ -98,7 +98,7 @@ heroku_migrate() {
 }
 
 heroku_console() {
-  heroku run $@ -- "rails console -- --simple-prompt"
+  heroku run $@ -- "USER=swrobel rails console -- --simple-prompt"
 }
 
 rails_scaffold_without_views() {
