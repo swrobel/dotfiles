@@ -10,7 +10,6 @@ brew install git
 brew install highlight
 brew install htop
 brew install lesspipe
-brew install mailhog
 brew install mkcert
 brew install nano
 brew install ncdu
@@ -21,15 +20,15 @@ brew install prettyping
 brew install python3
 brew install ruby
 brew install terminal-notifier
-brew install tldr
+brew install tlrc
 brew install trash
 brew install wget
 brew install yarn
 brew install yt-dlp
 
 brew install --cask appcleaner
-brew install --cask bartender
 brew install --cask bettertouchtool
+brew install --cask cursor
 brew install --cask dropbox
 brew install --cask espanso
 brew install --cask firefox
@@ -38,12 +37,11 @@ brew install --cask iina
 brew install --cask imageoptim
 brew install --cask istat-menus
 brew install --cask iterm2
-brew install --cask kaleidoscope
 brew install --cask krisp
 brew install --cask mediainfo
 brew install --cask postico
 brew install --cask quip
-brew install --cask skype
+brew install --cask signal
 brew install --cask slack
 brew install --cask sourcetree
 brew install --cask spotify
@@ -53,6 +51,3 @@ brew install --cask whatsapp
 
 brew tap colindean/fonts-nonfree
 brew install --cask font-microsoft-office
-
-brew install heroku/brew/heroku
-brew install TomAnthony/brews/itermocil
