@@ -5,6 +5,7 @@ else
   export HOMEBREW_PREFIX=/usr/local
 fi
 export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 export EDITOR="subl -w"
 export EC2_HOME="$HOMEBREW_PREFIX/Library/LinkedKegs/ec2-api-tools/jars"
 # Twilight theme
