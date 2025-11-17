@@ -1,9 +1,3 @@
 !/.bundle/config
-/.config/iterm2
-/.config/gh/hosts.yml
-/.config/gh/state.yml
-/.config/configstore/
-/.config/SOLOSHOT/
-/.config/flipper/
-/.config/htop/
-/.config/heroku/accounts
+/.config/
+!/.config/gh
