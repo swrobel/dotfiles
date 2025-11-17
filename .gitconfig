@@ -34,9 +34,9 @@
 	first-run = false
 [status]
 	showUntrackedFiles = all
-[credential]
-	helper = osxkeychain
 [init]
 	defaultBranch = main
 [rebase]
 	updateRefs = true
+[fetch]
+	pruneTags = true
