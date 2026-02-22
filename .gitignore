@@ -1,3 +1,4 @@
 !/.bundle/config
-/.config/
+/.config/*
 !/.config/gh
+!/.config/git

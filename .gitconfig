@@ -16,8 +16,6 @@
 [mergetool]
 	prompt = false
 	keepBackup = false
-[merge]
-	tool = Kaleidoscope
 [color]
 	ui = true
 [core]
@@ -40,3 +38,6 @@
 	updateRefs = true
 [fetch]
 	pruneTags = true
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
