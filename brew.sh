@@ -37,13 +37,13 @@ brew install --cask google-chrome
 brew install --cask iina
 brew install --cask keka
 brew install --cask imageoptim
-brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask postico
 brew install --cask quip
 brew install --cask signal
 brew install --cask slack
 brew install --cask sourcetree
+brew install --cask stats
 brew install --cask sublime-text
 brew install --cask visual-studio-code
 brew install --cask whatsapp
