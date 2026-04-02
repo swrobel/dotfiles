@@ -22,6 +22,7 @@ brew install ruby
 brew install terminal-notifier
 brew install tlrc
 brew install trash
+brew link trash --force
 brew install wget
 brew install yarn
 brew install yt-dlp
