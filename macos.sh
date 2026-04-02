@@ -57,7 +57,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-defaults write NSGlobalDomain AppleHighlightColor -int 1 # Orange
+defaults write NSGlobalDomain AppleAccentColor -int 1 # Orange
 defaults write NSGlobalDomain AppleHighlightColor -string "0.000000 0.650293 0.658228 Other" # Turquoise
 
 # Show draggable icon immediately in Finder windows when hovering over titlebar
@@ -124,6 +124,14 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
+
+###############################################################################
+# Menubar                                                                     #
+###############################################################################
+
+# Set tighter menubar icon spacing
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 
 ###############################################################################
 # Finder                                                                      #
