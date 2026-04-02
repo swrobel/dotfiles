@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
+# https://macos-defaults.com/
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -16,22 +16,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
-
-# Disable the over-the-top focus ring animation
-defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
-
-# Increase window resize speed for Cocoa applications
+# Resize windows instantly instead of animating
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
-# Expand save panel by default
+# Expand save dialog by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-
-# Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -44,10 +34,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
-# Display ASCII control characters using caret notation in standard text views
-# Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
-defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 # Disable Resume system-wide
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
@@ -74,13 +60,10 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
 defaults write NSGlobalDomain AppleHighlightColor -int 1 # Orange
 defaults write NSGlobalDomain AppleHighlightColor -string "0.000000 0.650293 0.658228 Other" # Turquoise
 
-# Adjust toolbar title rollover delay
+# Show draggable icon immediately in Finder windows when hovering over titlebar
 defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
 
 ###############################################################################
@@ -92,11 +75,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Disable “natural” (Lion-style) scrolling
+# Disable “natural” scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -115,23 +95,11 @@ defaults write NSGlobalDomain KeyRepeat -float 1.45
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
-# Screen                                                                      #
+# Screenshots                                                                 #
 ###############################################################################
-
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
-
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
-
-# Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
-
-# Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
@@ -143,20 +111,6 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Set Desktop as the default location for new Finder windows
-# For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
-
-# Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-
-# Finder: show hidden files by default
-#defaults write com.apple.finder AppleShowAllFiles -bool true
-
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -165,6 +119,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Enable column auto-sizing
+defaults write com.apple.finder _FXEnableColumnAutoSizing -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -224,9 +181,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
-
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
@@ -237,16 +191,6 @@ defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
-
-# Don’t group windows by application in Mission Control
-# (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false
-
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -282,8 +226,10 @@ defaults write com.apple.dock show-recents -bool false
 # 11: Launchpad
 # 12: Notification Center
 # 13: Lock Screen
-# Bottom left screen corner → Display Sleep
-defaults write com.apple.dock wvous-bl-corner -int 10
+
+# Shift + Bottom right corner → Display Sleep
+defaults write com.apple.dock wvous-br-modifier -int 131072
+defaults write com.apple.dock wvous-br-corner -int 10
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -433,14 +379,15 @@ defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool true
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Set default folder exclusions
+sudo tmutil addexclusion -p /opt
 sudo tmutil addexclusion -p /usr/local
 sudo tmutil addexclusion -p ~/.dropbox
 sudo tmutil addexclusion -p ~/.gem
 sudo tmutil addexclusion -p ~/Code
 sudo tmutil addexclusion -p ~/Downloads
-sudo tmutil addexclusion -p ~/Dropbox
 sudo tmutil addexclusion -p ~/Library/Application\ Support
 sudo tmutil addexclusion -p ~/Library/Caches
+sudo tmutil addexclusion -p ~/Library/CloudStorage
 
 
 ###############################################################################
@@ -494,18 +441,3 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-###############################################################################
-# QLColorCode                                                                 #
-###############################################################################
-
-# Use Hack font
-defaults write org.n8gray.QLColorCode font Hack
-
-# All available themes: http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples
-defaults write org.n8gray.QLColorCode hlTheme orion
-
-# Disable Gatekeeper
-sudo spctl --master-disable
-
-echo "Restart for all changes to take effect."
