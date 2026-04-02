@@ -14,6 +14,9 @@ export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 # If set, Homebrew will download in parallel using this many concurrent connections. Setting to auto will use twice the number of available CPU cores (what our benchmarks showed to produce the best performance). If set to 1 (the default), Homebrew will download in serial.
 export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 
+# Automatically verify apps installed via Homebrew cask
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
