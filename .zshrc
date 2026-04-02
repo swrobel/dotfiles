@@ -6,10 +6,12 @@ ZSH_THEME="twilight"
 ZSH_DISABLE_COMPFIX=true
 DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
-plugins=(chruby)
+if [[ -f $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh ]]; then
+  plugins=(chruby)
+  add-zsh-hook precmd chruby_auto
+fi
 source $ZSH/oh-my-zsh.sh
 source ~/.zprofile
-add-zsh-hook precmd chruby_auto
 
 test -e "$HOME/.env_vars" && source $HOME/.env_vars
 

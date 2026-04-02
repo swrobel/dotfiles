@@ -38,7 +38,9 @@ if [[ -f $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh ]]; then
   source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 fi
 
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+if [[ -f $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh ]]; then
+  source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+fi
 
 # Latest ruby version directory is always unversioned
 if [ -d "$HOMEBREW_PREFIX/Cellar/ruby/" ];then
@@ -67,4 +69,6 @@ if [ -d "$HOME/.asdf/installs/ruby/" ];then
   RUBIES+=($HOME/.asdf/installs/ruby/*)
 fi
 
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
+if [[ -f $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh ]]; then
+  source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
+fi
