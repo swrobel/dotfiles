@@ -81,12 +81,18 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# For login screen as well
+defaults -currentHost write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Lower is faster
 defaults write NSGlobalDomain InitialKeyRepeat -float 14
+# For login screen as well
+defaults -currentHost write NSGlobalDomain InitialKeyRepeat -float 14
 
 # Lower is faster
 defaults write NSGlobalDomain KeyRepeat -float 1.45
+# For login screen as well
+defaults -currentHost write NSGlobalDomain KeyRepeat -float 1.45
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
