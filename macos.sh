@@ -72,8 +72,29 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Disable “natural” scrolling
+# Trackpad: Disable two-finger swipes
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Trackpad: swipe between pages with three fingers
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+
+# Trackpad: disable Mission Control three-finger swipe up
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.fourFingerVertSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 0
+
+# Trackpad: disable “natural” scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Trackpad: tracking speed
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1
+
+# Trackpad: quiet click
+defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
