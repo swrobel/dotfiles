@@ -133,6 +133,15 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 
+# Disable Spotlight icon
+defaults write com.apple.controlcenter "NSStatusItem Visible Spotlight" -bool false
+
+# Disable Now Playing icon
+defaults write com.apple.controlcenter "NSStatusItem Visible NowPlaying" -bool false
+
+# Disable Battery icon (using the one from Stats instead)
+defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -bool false
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
