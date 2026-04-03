@@ -7,5 +7,6 @@
 1. Install [Homebrew](https://brew.sh/) `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 1. `Code/dotfiles/brew.sh`
 1. Install [oh-my-zsh](https://ohmyz.sh/#install) `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-1. Install [Hack Nerd Font FC Ligatured CCG](https://github.com/gaplo917/Ligatured-Hack/releases/download/v3.003%2BNv2.1.0%2BFC%2BJBMv2.242/HackLigatured-v3.003+FC3.1+JBMv2.242.zip)
+1. Install Hack Nerd Font FC Ligatured CCG from Dropbox
+1. Install [Twilight terminal theme](https://github.com/swrobel/twilight-terminal-theme)
 1. Install [quartz filters](https://github.com/doekman/Apple-Quartz-Filters/releases)
