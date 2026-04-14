@@ -16,6 +16,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Automatic light/dark theme
+defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+
 # Resize windows instantly instead of animating
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
