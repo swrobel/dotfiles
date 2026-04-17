@@ -243,7 +243,7 @@ alias gchangemost='git log --format=format: --name-only --since="1 year ago" | s
 alias gwho='git shortlog -sn --no-merges'
 alias gbuggy='git log -i -E --grep="fix|bug|broken" --name-only --format="" | sort | uniq -c | sort -nr | head -20'
 alias gbymonth='git log --format="%ad" --date=format:"%Y-%m" | sort | uniq -c'
-alias gfirefighting='git log --oneline --since="1 year ago" | grep -iE "revert|hotfix|emergency|rollback"'
+alias gfirefighting='git log --pretty=format:"%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%cr)%Creset" --date=short --since="1 year ago" --color=always | grep -iE "revert|hotfix|emergency|rollback"'
 
 # github aliases
 alias ghrc='gh repo clone'
