@@ -239,7 +239,7 @@ alias gauc='git update-index --skip-worktree'
 alias gac='git update-index --no-skip-worktree'
 alias gbsu='git branch -u origin/$(git branch --show-current)' # Set upstream to origin/current-branch
 # https://piechowski.io/post/git-commands-before-reading-code/
-alias gchangemost='git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20'
+alias gchangemost='git log --format=format: --name-only --since="1 year ago" | grep -v "^$" | sort | uniq -c | sort -nr | head -20'
 alias gwho='git shortlog -sn --no-merges'
 alias gbuggy='git log -i -E --grep="fix|bug|broken" --name-only --format="" | sort | uniq -c | sort -nr | head -20'
 alias gbymonth='git log --format="%ad" --date=format:"%Y-%m" | sort | uniq -c'
