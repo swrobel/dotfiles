@@ -48,5 +48,5 @@ brew install --cask sublime-text
 brew install --cask visual-studio-code
 brew install --cask whatsapp
 
-brew tap colindean/fonts-nonfree
+brew tap colindean/fonts-nonfree && brew trust colindean/fonts-nonfree
 brew install --cask font-microsoft-office
