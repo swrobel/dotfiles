@@ -17,6 +17,9 @@ export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 # Automatically verify apps installed via Homebrew cask
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
+# Don't show casks marked as auto-updating in "brew outdated"
+HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
+
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
