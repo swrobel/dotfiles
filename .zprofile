@@ -18,7 +18,7 @@ export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Don't show casks marked as auto-updating in "brew outdated"
-HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
