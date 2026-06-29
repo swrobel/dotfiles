@@ -1,6 +1,7 @@
 # https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
 ulimit -n 20000
 
+# Oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="twilight"
 ZSH_DISABLE_COMPFIX=true
@@ -8,13 +9,17 @@ DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
 if [[ -f $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh ]]; then
   plugins=(chruby)
-  add-zsh-hook precmd chruby_auto
 fi
 source $ZSH/oh-my-zsh.sh
 source ~/.zprofile
+if [[ -f $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh ]]; then
+  add-zsh-hook precmd chruby_auto
+fi
 
+# Load local env vars
 test -e "$HOME/.env_vars" && source $HOME/.env_vars
 
+# ZSH options
 unsetopt extendedglob # Disable extended pattern matching so # and other special chars don't get interpreted by ZSH
 unsetopt autocd # Disable changing directories when typing the name of a directory without the preceding 'cd'
 setopt nobanghist # Disable ZSH interpreting !
