@@ -72,12 +72,12 @@ ls_or_less() {
   fi
 }
 
-# Run cursor if available, otherwise code
-cursor_or_code() {
-  if [ -x "$(command -v cursor)" ];then
-    cursor $@
-  else
+# Run vscode if available, otherwise cursor
+code_or_cursor() {
+  if [ -x "$(command -v code)" ];then
     code $@
+  else
+    cursor $@
   fi
 }
 
@@ -397,7 +397,7 @@ alias s="subl"
 alias s.="s ."
 alias sm="smerge"
 alias sm.="sm ."
-alias c="code"
+alias c="code_or_cursor"
 alias c.="c ."
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias st="stree"
