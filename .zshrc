@@ -134,10 +134,6 @@ disable-dark-mode() {
   defaults delete "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance
 }
 
-bundle_filtered() {
-  bundle "$@" # | awk '!/^(Using|Fetching)/'
-}
-
 # https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
 mv() {
   if [ "$#" -ne 1 ];then
@@ -281,16 +277,16 @@ alias gi='gem install'
 alias gu='gem uninstall'
 
 # Bundler aliases
-alias b='bundle_filtered install'
-alias bu='bundle_filtered update'
+alias b='bundle install'
+alias bu='bundle update --all'
 alias be='bundle exec'
 alias bc='bundle clean'
-alias bo='bundle_filtered outdated'
+alias bo='bundle outdated'
 alias ub='gem update bundler --default && gem clean bundler'
-alias bur='bundle_filtered update --ruby'
+alias bur='bundle update --ruby'
 alias by='b && y'
 alias byu='bu && yu'
-alias bub='bundle_filtered update --bundler'
+alias bub='bundle update --bundler'
 
 # Rails aliases
 alias rdbm='rake db:migrate:with_data || rake db:migrate'
