@@ -77,7 +77,7 @@ code_or_cursor() {
   if [ -x "$(command -v code)" ];then
     code $@
   else
-    cursor $@
+    cursor --classic $@
   fi
 }
 
