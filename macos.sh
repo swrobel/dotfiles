@@ -355,7 +355,7 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 # Disable automatic text replacement
-defaults write WebAutomaticTextReplacementEnabled -bool false
+defaults write -g WebAutomaticTextReplacementEnabled -bool false
 
 ###############################################################################
 # Spotlight                                                                   #
