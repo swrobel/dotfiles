@@ -35,8 +35,8 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+# Restore windows when launching apps
+defaults write -g NSQuitAlwaysKeepsWindows -bool true
 
 # Disable automatic termination of inactive apps
 defaults write -g NSDisableAutomaticTermination -bool true
@@ -411,9 +411,6 @@ sudo mdutil -E / > /dev/null
 
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
-
-# Restore Terminal tabs after quitting & restarting
-defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool true
 
 ###############################################################################
 # Time Machine                                                                #
