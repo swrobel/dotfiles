@@ -17,17 +17,17 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Automatic light/dark theme
-defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
 
 # Resize windows instantly instead of animating
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write -g NSWindowResizeTime -float 0.001
 
 # Expand save dialog by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -39,7 +39,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+defaults write -g NSDisableAutomaticTermination -bool true
 
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
@@ -52,19 +52,19 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 sudo systemsetup -setrestartfreeze on
 
 # Disable automatic capitalization as it’s annoying when typing code
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
 
 # Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 
-defaults write NSGlobalDomain AppleAccentColor -int 1 # Orange
-defaults write NSGlobalDomain AppleHighlightColor -string "0.000000 0.650293 0.658228 Other" # Turquoise
+defaults write -g AppleAccentColor -int 1 # Orange
+defaults write -g AppleHighlightColor -string "0.000000 0.650293 0.658228 Other" # Turquoise
 
 # Show draggable icon immediately in Finder windows when hovering over titlebar
-defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -72,54 +72,54 @@ defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
+defaults write -g com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: Disable two-finger swipes
-defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write -g AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Trackpad: swipe between pages with three fingers
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+defaults -currentHost write -g com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
 
 # Trackpad: disable Mission Control three-finger swipe up
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
+defaults -currentHost write -g com.apple.trackpad.threeFingerVertSwipeGesture -int 0
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.fourFingerVertSwipeGesture -int 0
+defaults -currentHost write -g com.apple.trackpad.fourFingerVertSwipeGesture -int 0
 defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 0
 
 # Trackpad: disable “natural” scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write -g com.apple.swipescrolldirection -bool false
 
 # Trackpad: tracking speed
-defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1
+defaults write -g com.apple.trackpad.scaling -float 1
 
 # Trackpad: quiet click
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write -g AppleKeyboardUIMode -int 3
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
 # For login screen as well
-defaults -currentHost write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults -currentHost write -g ApplePressAndHoldEnabled -bool false
 
 # Lower is faster
-defaults write NSGlobalDomain InitialKeyRepeat -float 14
+defaults write -g InitialKeyRepeat -float 14
 # For login screen as well
-defaults -currentHost write NSGlobalDomain InitialKeyRepeat -float 14
+defaults -currentHost write -g InitialKeyRepeat -float 14
 
 # Lower is faster
-defaults write NSGlobalDomain KeyRepeat -float 1.45
+defaults write -g KeyRepeat -float 1.45
 # For login screen as well
-defaults -currentHost write NSGlobalDomain KeyRepeat -float 1.45
+defaults -currentHost write -g KeyRepeat -float 1.45
 
 # Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
 # Screenshots                                                                 #
@@ -156,7 +156,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write -g AppleShowAllExtensions -bool true
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -320,7 +320,7 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+defaults write -g WebKitDeveloperExtras -bool true
 
 # Enable continuous spellchecking
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
