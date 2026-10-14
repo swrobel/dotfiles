@@ -20,6 +20,9 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Don't show casks marked as auto-updating in "brew outdated"
 export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 
+# Don't print New Formulae & New Casks
+export HOMEBREW_NO_UPDATE_REPORT_NEW=1
+
 # Twilight theme
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
