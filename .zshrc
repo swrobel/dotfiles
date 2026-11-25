@@ -160,6 +160,14 @@ brew_uninstall_and_autoremove() {
   brew uninstall "$@" && brew autoremove
 }
 
+bundle_update_single_or_all() {
+  if (( $# ));then
+    bundle update "$@"
+  else
+    bundle update --all
+  fi
+}
+
 # Git aliases
 alias g='git'
 alias gco='git checkout'
@@ -181,7 +189,8 @@ alias gs='git status -s'
 alias gss='git status'
 alias gcom='gco $(gdb) && gl && gbp'
 alias gcop='gco production && gl'
-alias gcodm='gcod && gmm && gp'
+alias gcos='gco staging && gl'
+alias gcon='gco next && gl'
 alias gb='git branch'
 alias gbd='git branch -D'
 alias gba='git branch -a'
@@ -220,7 +229,6 @@ alias gpof='gpf -u origin'
 alias gph='gp heroku main'
 alias gpp='gp production production:main'
 alias gppf='gpp --force-with-lease'
-alias gps='gp staging main'
 alias gpsf='gps --force-with-lease'
 alias gpd='gp dokku'
 alias gpdf='gpd --force-with-lease'
@@ -278,7 +286,7 @@ alias gu='gem uninstall'
 
 # Bundler aliases
 alias b='bundle install'
-alias bu='bundle update --all'
+alias bu='bundle_update_single_or_all'
 alias be='bundle exec'
 alias bc='bundle clean'
 alias bo='bundle outdated'
@@ -335,18 +343,23 @@ alias hr='h restart'
 alias hm='heroku_migrate'
 alias hcp='hc -r production'
 alias hcs='hc -r staging'
+alias hcn='hc -r next'
 alias hlp='hl -r production'
 alias hls='hl -r staging'
+alias hln='hl -r next'
 alias hrp='hr -r production'
 alias hrs='hr -r staging'
+alias hrn='hr -r next'
 alias hmp='hm -r production'
 alias hms='hm -r staging'
 alias hrun='h run'
 alias hrunp='hrun -r production'
 alias hruns='hrun -r staging'
+alias hrunn='hrun -r next'
 alias hcf='h config'
 alias hcfp='hcf -r production'
 alias hcfs='hcf -r staging'
+alias hcfn='hcf -r next'
 alias hh='h help'
 alias hrc='heroku autocomplete --refresh-cache'
 
